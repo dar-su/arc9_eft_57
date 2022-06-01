@@ -77,28 +77,28 @@ SWEP.HeatLockout = false
 -------------------------- FIREMODES
 
 SWEP.RPM = 500 -- idk ?
-SWEP.Firemodes = { { Mode = -1 } }
+SWEP.Firemodes = { { Mode = 1 } }
 
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 0.3
+SWEP.Recoil = 1
 SWEP.EFTRecoil = true
-SWEP.EFTRecoilUpMult = 82
-SWEP.EFTRecoilSideMult = 7
+SWEP.EFTRecoilUpMult = 250
+SWEP.EFTRecoilSideMult = 300
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.45 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1.5 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.015 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.9
+SWEP.RecoilRandomUp = 0.06
+SWEP.RecoilRandomSide = 0.01
 
 SWEP.RecoilDissipationRate = 15 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 7 -- Multiplier for automatic recoil control.
+SWEP.RecoilAutoControl = 5 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 0.4
 SWEP.FirstShootRecoilUp = 2
@@ -109,15 +109,15 @@ SWEP.FirstShootRecoilUp = 2
 SWEP.UseVisualRecoil = true 
 
 SWEP.VisualRecoil = 1
-SWEP.VisualRecoilMultSights = 0.3
+SWEP.VisualRecoilMultSights = 0.9
 
-SWEP.VisualRecoilUp = 1.1 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.05 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilUp = 6.1 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilSide = 0.03 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 1 -- Roll tilt for visual recoil.
 
-SWEP.VisualRecoilCenter = Vector(2, 11, 2) -- The "axis" of visual recoil. Where your hand is.
+SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
 
-SWEP.VisualRecoilPunch = 3 -- How far back visual recoil moves the gun.
+SWEP.VisualRecoilPunch = 5 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = 0.5
 
 
@@ -125,8 +125,8 @@ SWEP.VisualRecoilHipFire = 1
 
 SWEP.RecoilKick = 0.05 -- Camera recoil
 SWEP.RecoilKickDamping = 10 -- Camera recoil damping
-SWEP.VisualRecoilDampingConst = 10 -- How spring will be visual recoil, 120 is default
-SWEP.VisualRecoilSpringMagnitude = .2
+SWEP.VisualRecoilDampingConst = 70 -- How spring will be visual recoil, 120 is default
+SWEP.VisualRecoilSpringMagnitude = 0.6
 
 
 
@@ -206,10 +206,10 @@ SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "physgun"
 
 SWEP.WorldModelOffset = {
-    -- Pos = Vector(-7, 4, -6), -- ar2
-    Pos = Vector(-6, 6, -5), -- rpg
-
-    Ang = Angle(-5, 0, 180),
+    Pos = Vector(-15.5, 5.5, -4),
+    Ang = Angle(-7, 0, 180),
+    TPIKPos = Vector(-6, 6, -5), -- rpg
+    TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
 
@@ -288,46 +288,46 @@ end
 
 
 local rst_single = {
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 6/30 },    
-    { s = "eft_shared/weap_handoff.wav", t = 9/30 },
-    { s = "eft_shared/weap_round_pullout.wav", t = 14/30 },
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 20/30  },
-    { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 32/30  },
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 43/30 },
-    { s =  path .. "fiveseven_slider_in_fast.wav", t = 49/30  },
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 57/30  },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 6/26 },    
+    { s = "eft_shared/weap_handoff.wav", t = 9/26 },
+    { s = "eft_shared/weap_round_pullout.wav", t = 14/26 },
+    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 20/26  },
+    { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 32/26  },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 43/26 },
+    { s =  path .. "fiveseven_slider_in_fast.wav", t = 49/26 },
+    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 57/26 },
 }
 
 local rst_def = {
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 4/30 },    
-    { s = "eft_shared/weap_handoff.wav", t = 7/30 },
-    { s =  path .. "fiveseven_mag_releasebutton.wav", t = 14/30  },
-    { s =  path .. "fiveseven_mag_out.wav", t = 16/30  },
-    { s =  path .. "fiveseven_mag_rattle3.wav", t = 21/30  },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 4/28 },    
+    { s = "eft_shared/weap_handoff.wav", t = 7/28 },
+    { s =  path .. "fiveseven_mag_releasebutton.wav", t = 14/28 },
+    { s =  path .. "fiveseven_mag_out.wav", t = 16/28 },
+    { s =  path .. "fiveseven_mag_rattle3.wav", t = 21/28 },
 
 
-    { s =  path .. "fiveseven_mag_rattle.wav", t = 25/30  },
-    { s = "eft_shared/weap_magin_sbrosnik.wav", t = 35/30 },
-    -- { s = "eft_shared/weap_mag_pullout.wav", t = 46/30 },
+    { s =  path .. "fiveseven_mag_rattle.wav", t = 25/28 },
+    { s = "eft_shared/weap_magin_sbrosnik.wav", t = 35/28 },
+    -- { s = "eft_shared/weap_mag_pullout.wav", t = 46/24 },
 
-    { s =  path .. "fiveseven_mag_rattle2.wav", t = 56/30  },
-    { s =  path .. "fiveseven_mag_in.wav", t = 62/30  },
+    { s =  path .. "fiveseven_mag_rattle2.wav", t = 56/28 },
+    { s =  path .. "fiveseven_mag_in.wav", t = 62/28 },
 
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 75/30  },
+    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 75/28 },
 }
 
 local rst_empty = {
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 3/30 },    
-    { s = "eft_shared/weap_handoff.wav", t = 6/30 },
-    { s =  path .. "fiveseven_mag_releasebutton.wav", t = 9/30  },
-    { s =  path .. "fiveseven_mag_out.wav", t = 12/30  },
-    { s = "eft_shared/weap_magin_sbrosnik.wav", t = 23/30 },
-    { s =  "eft_shared/weapon_generic_rifle_spin2.wav", t = 35/30  },
-    { s =  path .. "fiveseven_mag_rattle3.wav", t = 41/30  },
-    { s =  path .. "fiveseven_mag_in.wav", t = 46/30  },
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 59/30 },  
-    { s =  path .. "fiveseven_slider_in_fast.wav", t = 68/30  },
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 75/30  },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 3/28 },    
+    { s = "eft_shared/weap_handoff.wav", t = 6/28 },
+    { s =  path .. "fiveseven_mag_releasebutton.wav", t = 9/28 },
+    { s =  path .. "fiveseven_mag_out.wav", t = 12/28 },
+    { s = "eft_shared/weap_magin_sbrosnik.wav", t = 23/28 },
+    { s =  "eft_shared/weapon_generic_rifle_spin2.wav", t = 35/28 },
+    { s =  path .. "fiveseven_mag_rattle3.wav", t = 41/28 },
+    { s =  path .. "fiveseven_mag_in.wav", t = 46/28 },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 59/28 },  
+    { s =  path .. "fiveseven_slider_in_fast.wav", t = 68/28 },
+    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 75/28 },
     
 }
 
@@ -455,16 +455,16 @@ SWEP.Animations = {
         Source = "inspect1",
         EventTable = {
             { s = "eft_shared/weap_handoff.wav", t = 0.05 },
-            { s =  path .. "fiveseven_mag_releasebutton.wav", t = 7/30  },
-            { s =  path .. "fiveseven_mag_out.wav", t = 10/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 16/30 },
-            { s =  path .. "fiveseven_mag_rattle2.wav", t = 24/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 29/30 },
-            -- { s =  path .. "fiveseven_mag_rattle3.wav", t = 42/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 57/30 },
-            { s =  path .. "fiveseven_mag_rattle.wav", t = 60/30  },
-            { s =  path .. "fiveseven_mag_in.wav", t = 73/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 85/30  },
+            { s =  path .. "fiveseven_mag_releasebutton.wav", t = 7/24 },
+            { s =  path .. "fiveseven_mag_out.wav", t = 10/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 16/24 },
+            { s =  path .. "fiveseven_mag_rattle2.wav", t = 24/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 29/24 },
+            -- { s =  path .. "fiveseven_mag_rattle3.wav", t = 42/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 57/24 },
+            { s =  path .. "fiveseven_mag_rattle.wav", t = 60/24 },
+            { s =  path .. "fiveseven_mag_in.wav", t = 73/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 85/24 },
         }
     },
 
@@ -472,11 +472,11 @@ SWEP.Animations = {
         Source = "inspect2",
         EventTable = {
             { s = "eft_shared/weap_handoff.wav", t = 0.05 },
-            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 10/30 },
-            { s = path .. "fiveseven_slider_out_slow.wav", t = 19/30 },
-            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 26/30 },
-            { s = path .. "fiveseven_slider_in_slow.wav", t = 35/30 },
-            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 48/30 },
+            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 10/24 },
+            { s = path .. "fiveseven_slider_out_slow.wav", t = 19/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 26/24 },
+            { s = path .. "fiveseven_slider_in_slow.wav", t = 35/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 48/24 },
         }
     },
 
@@ -495,16 +495,16 @@ SWEP.Animations = {
         Source = "inspect1_empty",
         EventTable = {
             { s = "eft_shared/weap_handoff.wav", t = 0.05 },
-            { s =  path .. "fiveseven_mag_releasebutton.wav", t = 7/30  },
-            { s =  path .. "fiveseven_mag_out.wav", t = 10/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 16/30 },
-            { s =  path .. "fiveseven_mag_rattle2.wav", t = 24/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 29/30 },
-            -- { s =  path .. "fiveseven_mag_rattle3.wav", t = 42/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 57/30 },
-            { s =  path .. "fiveseven_mag_rattle.wav", t = 60/30  },
-            { s =  path .. "fiveseven_mag_in.wav", t = 73/30  },
-            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 85/30  },
+            { s =  path .. "fiveseven_mag_releasebutton.wav", t = 7/24 },
+            { s =  path .. "fiveseven_mag_out.wav", t = 10/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 16/24 },
+            { s =  path .. "fiveseven_mag_rattle2.wav", t = 24/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 29/24 },
+            -- { s =  path .. "fiveseven_mag_rattle3.wav", t = 42/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 57/24 },
+            { s =  path .. "fiveseven_mag_rattle.wav", t = 60/24 },
+            { s =  path .. "fiveseven_mag_in.wav", t = 73/24 },
+            { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 85/24 },
         }
     },
 
