@@ -3,7 +3,7 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
-SWEP.Category = "ARC-9 eft"
+SWEP.Category = "ARC-9 - Escape From Tarkov"
 
 SWEP.PrintName = "FN Five-seveN MK2"
 
