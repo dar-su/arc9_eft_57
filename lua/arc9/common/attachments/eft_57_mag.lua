@@ -9,5 +9,6 @@ ATT.MenuCategory = "ARC-9 - EFT Attachments"
 ATT.ChamberSize = 1
 ATT.ClipSize = 20
 ATT.DropMagazineAmount = 1
+ATT.SuppressEmptySuffix = false 
 
 ATT.Category = {"eft_57_mag"}

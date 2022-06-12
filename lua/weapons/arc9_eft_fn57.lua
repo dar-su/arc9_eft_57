@@ -76,7 +76,7 @@ SWEP.HeatDissipation = 6
 SWEP.HeatLockout = false
 -------------------------- FIREMODES
 
-SWEP.RPM = 500 -- idk ?
+SWEP.RPM = 460 -- idk ?
 SWEP.Firemodes = { { Mode = 1 } }
 
 -------------------------- RECOIL
@@ -260,42 +260,54 @@ SWEP.ToggleAttSound = ""-- we will have own in sound tables
 
 SWEP.DryFireSound = "eft_shared/weap_trigger_empty.wav"
 
+SWEP.SuppressEmptySuffix = true 
+
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
     if !IsFirstTimePredicted() then return end
 
+    local ending = ""
+
     local rand = math.Truncate(util.SharedRandom("hi", 0, 2.99))
+    local nomag = !elements["eft_57_mag"]
+    local empty = swep:Clip1() == 0
 
+    -- 0 looking
+    -- 1 mag check  (!nomag)
+    -- 2 slide checking  (!empty)
+    
     if anim == "inspect" then
-        if swep:Clip1() == 0 then
-            return anim .. "_empty" .. math.max(rand, 1)
+        if !empty and !nomag then
+            ending = rand
         else
-            return anim .. rand
-        end
+            rand = math.max(rand, 1)
 
-            
+            if nomag then
+                ending = (rand==1 and 2 or 0)
+            else
+                ending = "_empty" .. rand
+            end
+        end
         
+        return anim .. ending
     end
     
-    if !elements["eft_57_mag"] then
-        -- if anim == "inspect" or anim == "inspect_empty" then
-        --     return anim .. "_nomag"
-        -- end
-
+    if nomag then -- reload
         return anim .. "_single"
     end
 end
 
 
 local rst_single = {
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 6/26 },    
-    { s = "eft_shared/weap_handoff.wav", t = 9/26 },
-    { s = "eft_shared/weap_round_pullout.wav", t = 14/26 },
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 20/26  },
-    { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 32/26  },
-    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 43/26 },
-    { s =  path .. "fiveseven_slider_in_fast.wav", t = 49/26 },
-    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 57/26 },
+    -- { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 3/26 },    
+    -- { s = "eft_shared/weap_handoff.wav", t = 8/26 },
+    { s = "eft_shared/weap_round_pullout.wav", t = 5/26 },
+    -- { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 17/26  },
+    { s = path .. "fiveseven_slider_out_slow.wav", t = 21/24 },
+    { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 43/26  },
+    { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 59/26 },
+    { s =  path .. "fiveseven_slider_in_fast.wav", t = 65/26 },
+    { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 74/26 },
 }
 
 local rst_def = {
@@ -340,7 +352,8 @@ SWEP.Animations = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
             { s = "eft_shared/weap_in.wav", t = 0 },
-            -- {s = path .. "chback.ogg",    t = 2 / 30},
+            { s = path .. "fiveseven_slider_in_fast.wav", t = 16/24 },
+            { s = path .. "fiveseven_slider_out_fast.wav", t = 20/24 },
         },
     },
 
@@ -480,7 +493,7 @@ SWEP.Animations = {
         }
     },
 
-    ["inspect_empty0"] = {
+    ["inspect0_empty"] = {
         Source = "inspect0_empty",
         EventTable = {
             { s = "eft_shared/weap_handoff.wav", t = 0.1 },
@@ -491,7 +504,7 @@ SWEP.Animations = {
         }
     },
 
-    ["inspect_empty1"] = {
+    ["inspect1_empty"] = {
         Source = "inspect1_empty",
         EventTable = {
             { s = "eft_shared/weap_handoff.wav", t = 0.05 },
@@ -507,44 +520,6 @@ SWEP.Animations = {
             { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 85/24 },
         }
     },
-
-    
-    -- ["inspect_empty"] = {
-    --     Source = {"inspect0_empty", "inspect1_empty"},
-    --     EventTable = {
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.05 },
-    --         -- { s = "eft_shared/weap_bolt_handle_out.wav", t = 0.4 },
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.95 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 2.4 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 3.1 },
-    --     }
-    -- },
-    -- ["inspect_empty_nomag"] = {
-    --     Source = {"inspect0_empty"},
-    --     EventTable = {
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.05 },
-    --         -- { s = "eft_shared/weap_bolt_handle_out.wav", t = 0.4 },
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.95 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 2.4 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 3.1 },
-    --     }
-    -- },
-    -- ["inspect_nomag"] = {
-    --     Source = {"inspect0"},
-    --     EventTable = {
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.05 },
-    --         -- { s = "eft_shared/weap_bolt_handle_out.wav", t = 0.4 },
-    --         { s = "eft_shared/weapon_generic_rifle_spin10.wav", t = 0.95 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin7.wav", t = 2.4 },
-            
-    --         { s = "eft_shared/weapon_generic_rifle_spin2.wav", t = 3.1 },
-    --     }
-    -- },
     
 }
 
