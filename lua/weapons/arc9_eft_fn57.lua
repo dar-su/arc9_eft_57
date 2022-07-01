@@ -587,6 +587,15 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Installed = "eft_57_mag"
+    },    
+    
+    {
+        PrintName = "Tactical",
+        Bone = "weapon",
+        Category = {"eft_tactical_pistol", "eft_um3"},
+        Pos = Vector(0, 23.8, -0.47),
+        Ang = Angle(90, -90, 90),
+        Icon_Offset = Vector(0, 0, 0),
     },
 
     {
