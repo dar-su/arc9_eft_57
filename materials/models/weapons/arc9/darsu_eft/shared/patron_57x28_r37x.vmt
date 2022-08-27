@@ -6,7 +6,7 @@
 	"$basetexture" "models/weapons/arc9/darsu_eft/shared/patron_57x28_r37f_LOD0_diff"
 	"$bumpmap" "models/weapons/arc9/darsu_eft/shared/patron_57x28_r37f_LOD0_nrm"
 	"$phongexponenttexture" "models/weapons/arc9/darsu_eft/shared/patron_57x28_r37f_LOD0_gloss"
-	"$color2"	"[0.7 0.7 0.7]"
+	"$color2"	"[1 1 1]"
 	"$phong" "1"
 	"$phongboost" "5"
 	"$phongexponent" "10"		

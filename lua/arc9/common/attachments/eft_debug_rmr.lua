@@ -8,10 +8,12 @@ ATT.SortOrder = 1
 
 ATT.Scale = 1
 ATT.Model = "models/entities/eft_attachments/eft_scope_rmr/models/eft_scope_rmrlow.mdl"
-ATT.Folder = "COLLIMATOR"
+-- ATT.Folder = "COLLIMATOR"
 
 ATT.Category = {"eft_rmr"}
 ATT.MenuCategory = "ARC-9 - EFT Attachments"
+
+ATT.ExcludeElements = {"eft_mount_g17_tshark"}
 
 ATT.DrawFunc = function(swep, model, wm)
     if IsValid(swep) and IsValid(model) then
