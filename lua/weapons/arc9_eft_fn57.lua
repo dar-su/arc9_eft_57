@@ -83,9 +83,9 @@ SWEP.Firemodes = { { Mode = 1 } }
 
 -- General recoil multiplier
 SWEP.Recoil = 1
-SWEP.EFTRecoil = true
-SWEP.EFTRecoilUpMult = 250
-SWEP.EFTRecoilSideMult = 300
+SWEP.ViewRecoil = true
+SWEP.ViewRecoilUpMult = 250
+SWEP.ViewRecoilSideMult = 300
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.1 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 0.015 -- Multiplier for vertical recoil
