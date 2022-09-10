@@ -269,6 +269,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     local ending = ""
 
     local rand = math.Truncate(util.SharedRandom("hi", 0, 2.99))
+    -- local rand = 1
     local nomag = !elements["eft_57_mag"]
     local empty = swep:Clip1() == 0
 
@@ -288,13 +289,31 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
                 ending = "_empty" .. rand
             end
         end
-        
+
+        if ending == 1 then
+            net.Start("arc9eftmagcheck")
+            net.WriteBool(false) -- accurate or not based on mag type
+            net.WriteUInt(math.min(swep:Clip1(), swep:GetMaxClip1()), 9)
+            net.WriteUInt(swep:GetMaxClip1(), 9)
+            net.Send(swep:GetOwner())
+        end
+
         return anim .. ending
     end
     
     if nomag then -- reload
         return anim .. "_single"
     end
+    
+    -- if anim == "fix" then
+    --     rand = math.Truncate(util.SharedRandom("hi", 0, 5.99))
+
+    --     net.Start("arc9eftjam")
+    --     net.WriteUInt(rand, 3)
+    --     net.Send(swep:GetOwner())
+
+    --     return "jam" .. rand
+    -- end
 end
 
 
