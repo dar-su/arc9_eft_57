@@ -278,15 +278,19 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     if anim == "inspect" then
         swep.EFTInspectnum = (swep.EFTInspectnum or 0) + 1
         local rand = swep.EFTInspectnum
-        if rand == 4 then swep.EFTInspectnum = 0 rand = 0 end
+        if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
 
         if !empty and !nomag then
             ending = rand
         else
-            rand = math.max(rand, 1)
+            -- rand = math.max(rand, 1)
 
             if nomag then
-                ending = (rand==2 and 1 or 0)
+                ending = rand
+                
+                if !empty then
+                    ending = rand==2 and 3 or 0
+                end
             else
                 ending = "_empty" .. rand
             end
