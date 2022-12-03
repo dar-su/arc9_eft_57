@@ -11,7 +11,7 @@ ATT.Model = "models/entities/eft_attachments/eft_scope_rmr/models/eft_scope_rmrl
 -- ATT.Folder = "COLLIMATOR"
 
 ATT.Category = {"eft_rmr"}
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.ExcludeElements = {"eft_mount_g17_tshark"}
 

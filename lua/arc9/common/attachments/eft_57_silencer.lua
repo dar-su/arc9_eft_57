@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/eft_57_attachments/silencer.png", "mips smooth")
 ATT.Description = [[SFN-57 is a compact, high-performance sound suppressor for modern 5.7 mm semi-automatic pistols. Produced by Gemtech.]]
 
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - EFT Attachments"
+ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Silenced = true 
 ATT.CustomizePos = Vector(24.7, 15, 4)
