@@ -148,7 +148,7 @@ SWEP.SecondarySupplyLimit = 4
 SWEP.ReloadInSights = true
 SWEP.SuppressEmptySuffix = true
 SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/p90mag.mdl"
-SWEP.DropMagazineSounds = { "eft_shared/weap_magdrop_plastic.wav" }
+SWEP.DropMagazineSounds = { "arc9_eft_shared/weap_magdrop_plastic.wav" }
 SWEP.DropMagazineAmount = 0
 SWEP.DropMagazineTime = 1.05
 SWEP.DropMagazineQCA = 4
@@ -335,7 +335,7 @@ SWEP.ReloadHideBoneTables = {
     },
 }
 
-local randspin = {"eft_shared/weapon_generic_rifle_spin1.wav","eft_shared/weapon_generic_rifle_spin2.wav","eft_shared/weapon_generic_rifle_spin3.wav","eft_shared/weapon_generic_rifle_spin4.wav","eft_shared/weapon_generic_rifle_spin5.wav","eft_shared/weapon_generic_rifle_spin6.wav","eft_shared/weapon_generic_rifle_spin7.wav","eft_shared/weapon_generic_rifle_spin8.wav","eft_shared/weapon_generic_rifle_spin9.wav","eft_shared/weapon_generic_rifle_spin10.wav"}
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
 local jamm = { "weapons/darsu_eft/57/pistol_jam_slidelock_try1.wav", "weapons/darsu_eft/57/pistol_jam_slidelock_try2.wav", "weapons/darsu_eft/57/pistol_jam_slidelock_try3.wav" }
 
 SWEP.Animations = {
@@ -348,7 +348,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
-            { s = "eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
             { s = path .. "p90_bolt_out.wav", t = 16/24 },
             { s = path .. "p90_bolt_in.wav", t = 20/24 },
         },
@@ -357,14 +357,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         EventTable = {
-            { s = "eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
         }
     },
 
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            { s = "eft_shared/weap_out.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_out.wav", t = 0 },
         }
     },
 
@@ -387,7 +387,7 @@ SWEP.Animations = {
             { s = randspin, t = 8/26 },
             { s = path .. "p90_bolt_out.wav", t = 18/26 },
             { s = randspin, t = 25/26 },
-            { s = "eft_shared/weap_round_pullout.wav", t = 35/26 },
+            { s = "arc9_eft_shared/weap_round_pullout.wav", t = 35/26 },
             { s = "weapons/darsu_eft/57/generic_jam_shell_ remove_medium3.wav", t = 50/26  },
             { s = randspin, t = 63/26 },
             { s = path .. "p90_bolt_in.wav", t = 73/26 },
@@ -402,7 +402,7 @@ SWEP.Animations = {
         EventTable = {
             { s = randspin, t = 6/28 },
             { s = path .. "p90_mag_out.wav", t = 19/28 },
-            { s = "eft_shared/weap_magin_sbrosnik.wav", t = 37/28 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 37/28 },
             { s = path .. "p90_mag_in_01_slide.wav", t = 56/28 },
             { s = path .. "p90_mag_in_02_down.wav", t = 63/28 },
             { s = randspin, t = 75/28 },
@@ -416,7 +416,7 @@ SWEP.Animations = {
             { s = randspin, t = 6/28 },
             { s = path .. "p90_mag_out.wav", t = 14/28 },
             { s = "weapons/darsu_eft/57/fiveseven_mag_rattle3.wav", t = 23/28 },
-            { s = "eft_shared/weap_magin_sbrosnik.wav", t = 34/28 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 34/28 },
             { s = path .. "p90_mag_in_01_slide.wav", t = 48/28 },
             { s = path .. "p90_mag_in_02_down.wav", t = 54/28 },
             { s = randspin, t = 65/28 },
@@ -432,13 +432,13 @@ SWEP.Animations = {
     ["toggle"] = {
         Source = "mod_switch",
         EventTable = {
-            { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
         }
     },
     ["switchsights"] = {
         Source = "mod_switch",
         EventTable = {
-            { s = {"eft_shared/weapon_light_switcher1.wav", "eft_shared/weapon_light_switcher2.wav", "eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
         }
     },
     
@@ -473,7 +473,7 @@ SWEP.Animations = {
             { s = path .. "p90_bolt_out.wav", t = 60/24 },            
             { s = jamm, t = 65/24 },
             { s = path .. "p90_bolt_out_slow.wav", t = 80/24 },            
-            { s = "eft_shared/weap_round_out.wav", t = 83/24 },            
+            { s = "arc9_eft_shared/weap_round_out.wav", t = 83/24 },            
             { s = path .. "p90_bolt_in.wav", t = 90/24 },
             { s = randspin, t = 98/24 },
             { s = path .. "p90_mag_in_01_slide.wav", t = 109/24 },
