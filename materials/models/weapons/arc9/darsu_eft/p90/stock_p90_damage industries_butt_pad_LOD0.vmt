@@ -1,0 +1,10 @@
+// ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE MATERIALS
+// Auto converter by Darsu, material setup and vmt by Mal0
+
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/darsu_eft/p90/stock_p90_damage industries_butt_pad_LOD0_diff"
+	"$bumpmap" "models/weapons/arc9/darsu_eft/p90/stock_p90_damage industries_butt_pad_LOD0_nrm"
+
+	"$color2" "[0.88 0.88 0.88]"
+}
