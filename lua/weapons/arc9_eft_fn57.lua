@@ -4,6 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
+SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "FN Five-seveN MK2"
 
@@ -31,7 +32,7 @@ SWEP.Slot = 2
 SWEP.MirrorVMWM = true
 -- SWEP.DefaultBodygroups = "0001110101101"
 SWEP.DefaultBodygroups = "00000000000000"
-
+SWEP.BarrelLength = 25
 SWEP.SpreadMultHipFire = 5
 SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilAutoControlMultHipFire = 0.5
@@ -68,7 +69,11 @@ SWEP.DropMagazineSounds = {
     "eft_shared/weap_magdrop_plastic.wav"
 } -- Table of sounds a dropped magazine should play.
 SWEP.DropMagazineAmount = 0 -- Amount of mags to drop.
-SWEP.DropMagazineTime = 0.5
+SWEP.DropMagazineTime = 0.26
+SWEP.DropMagazineQCA = 4
+SWEP.DropMagazinePos = Vector(0, -3, 0)
+SWEP.DropMagazineAng = Angle(90, 180, 90)
+SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 
 SWEP.Overheat = true
 SWEP.HeatCapacity = 30
@@ -83,6 +88,8 @@ SWEP.Firemodes = { { Mode = 1 } }
 
 -- General recoil multiplier
 SWEP.Recoil = 1
+SWEP.RecoilCrouchMult = 0.5
+SWEP.VisualRecoilCrouchMult = 0.5
 SWEP.ViewRecoil = true
 SWEP.ViewRecoilUpMult = 250
 SWEP.ViewRecoilSideMult = 300
@@ -101,7 +108,6 @@ SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 5 -- Multiplier for automatic recoil control.
 
 SWEP.RecoilKick = 0.4
-SWEP.FirstShootRecoilUp = 2
 
 
 
@@ -110,33 +116,40 @@ SWEP.UseVisualRecoil = true
 
 SWEP.VisualRecoil = 1
 SWEP.VisualRecoilMultSights = 0.9
+SWEP.VisualRecoilHipFire = 1.5
 
-SWEP.VisualRecoilUp = 6.1 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0.03 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 1 -- Roll tilt for visual recoil.
+SWEP.VisualRecoilUp = 20 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilSide = 25 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
 
 SWEP.VisualRecoilPunch = 5 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = 0.5
+SWEP.VisualRecoilPositionBumpUp = 0
+
+SWEP.VisualRecoilSpringPunchDamping = 11
+SWEP.VisualRecoilDampingConst = 300
+SWEP.VisualRecoilSpringMagnitude = 1
 
 
-SWEP.VisualRecoilHipFire = 1
 
 SWEP.RecoilKick = 0.05 -- Camera recoil
 SWEP.RecoilKickDamping = 10 -- Camera recoil damping
-SWEP.VisualRecoilDampingConst = 70 -- How spring will be visual recoil, 120 is default
-SWEP.VisualRecoilSpringMagnitude = 0.6
 
 
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.002
 
 SWEP.SpreadAddRecoil = 0.005 -- Applied per unit of recoil.
 
 -------------------------- HANDLING
+
+SWEP.Malfunction = true 
+SWEP.MalfunctionNeverLastShoot = true 
+SWEP.MalfunctionMeanShotsToFail = 333
 
 SWEP.FreeAimRadius = 1 / 1.25 -- In degrees, how much this gun can free aim in hip fire.
 SWEP.Sway = 0.75 + 1 -- How much the gun sways.
@@ -150,7 +163,7 @@ SWEP.FreeAimRadiusSights = 0
 
 SWEP.SwayMultSights = 0.3
 
-SWEP.AimDownSightsTime = 0.33 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.1 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.SpeedMult = 0.95
@@ -193,8 +206,8 @@ SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(21.7, 15, 4)
-SWEP.CustomizeSnapshotFOV = 49
+SWEP.CustomizePos = Vector(21.7, 19, 4.5)
+SWEP.CustomizeSnapshotFOV = 70
 
 -------------------------- HoldTypes
 
@@ -324,6 +337,16 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     end
 end
 
+SWEP.ReloadHideBoneTables = {
+    [1] = {
+        "mod_magazine",
+        "patron_in_mag0",
+        "patron_in_mag1",
+        "patron_in_mag2"
+    },
+}
+
+
 local randspin = {"eft_shared/weapon_generic_rifle_spin1.wav","eft_shared/weapon_generic_rifle_spin2.wav","eft_shared/weapon_generic_rifle_spin3.wav","eft_shared/weapon_generic_rifle_spin4.wav","eft_shared/weapon_generic_rifle_spin5.wav","eft_shared/weapon_generic_rifle_spin6.wav","eft_shared/weapon_generic_rifle_spin7.wav","eft_shared/weapon_generic_rifle_spin8.wav","eft_shared/weapon_generic_rifle_spin9.wav","eft_shared/weapon_generic_rifle_spin10.wav"}
 
 local rst_single = {
@@ -368,6 +391,9 @@ local rst_empty = {
     { s = randspin, t = 59/28 },  
     { s =  path .. "fiveseven_slider_in_fast.wav", t = 68/28 },
     { s = randspin, t = 75/28 },
+    {hide = 0, t = 0},
+    {hide = 1, t = 0.4},
+    {hide = 0, t = 0.9}
     
 }
 
@@ -644,6 +670,22 @@ SWEP.Animations = {
 }
 
 -------------------------- ATTACHMENTS
+
+SWEP.missingpartsnotifsent = 0
+
+function SWEP:HookP_BlockFire()
+    if  !self:GetValue("HasBarrel") or 
+        !self:GetValue("HasSlide") then
+            
+            if self.missingpartsnotifsent < CurTime() then
+                self.missingpartsnotifsent = CurTime() + 3
+                net.Start("arc9eftmissingparts")
+                net.Send(self:GetOwner())
+            end
+            return true 
+    end
+end
+
 
 SWEP.AttachmentElements = {
     ["eft_57_rec"]    = { Bodygroups = { {1, 1} } },
