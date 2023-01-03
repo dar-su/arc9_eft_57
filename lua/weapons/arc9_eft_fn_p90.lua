@@ -19,8 +19,8 @@ SWEP.Trivia = {
 SWEP.Description = [[FN P90, also known as the FN Project 1990, is a compact personal defense weapon (PDW) designed and manufactured by FN Herstal in Belgium. Created in response to NATO requests for a replacement for 9x19mm Parabellum firearms, the P90 was designed as a compact but powerful firearm for vehicle crews, operators of crew-served weapons, support personnel, special forces, and counter-terrorist groups.]]
 
 SWEP.StandardPresets = {
-    "[SBR]XQAAAQDFAQAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVisPPGQ68+wxl6Clg2XITsVKnjRUHFmJHQ0OBmnPtx4lHCV+juvDzUJm8N5rFGiqSsxAB/9j/Kxrs7Xuz6hYoZ1UcWQtc9AhCBv2FDPPD2zwvrvDqPwlaZ0QrNq9abb7wrb3VzTnQpJJL76Xsu/lJmuULDw=",
-    "[CWDG]XQAAAQAJAgAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVig8lqP9ajIpFq4QtXCdQZcMPH9a0d3jQpT2KU/HcIpbeMTNN/KEGHEWyi8E3qd5DFIi/R9mheHTme0rN6x98w0o4NOn/ZZ2KxPT5JwCRKd+lZLdC9K/khCfN3iDxy5NJQZ1nsADysUPmPS+bhU8CiJfGGMz1kH3fM/M//6ciI5IqG4N6WGadQFu5ru4yeQRNRtEOkM="
+    "[SBR]XQAAAQDkAQAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVisPPGQ68+wxl6Clg2WdPpXisRhzTpf/iEt6Gg8zuohxxwnRMcCgIqexBZtQsepi2XBaxJ5hSzYt41kzK/9Z19V4tqcMdFINtbCRO1nykUf5Ffy9TI/cd2zCORP380hDAg6kqXhO5yfsw41mXPQIovzxjy0psESphcE5q25r9NzIQI/ycLJ2CA==",
+    "[CWDG]XQAAAQAuAgAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVig8lqP9ajIpFq4QtXCdQZcMPH9a0d3jQpT2KU/HcIpbeMTNN/KEGHEWyi8E3qd5DFIi/R9mheHTmu1ixKNh8CnP8jDbIqx+0HBSdQlXRHA9mCCgX8a62i9XJX5d9PgmhsxMPoi+yElM5Bth9cdixYGlVfIKHaU5AGXkqK6F7P8HN7nd7DFzk7zEccKjeamv50x2PPQka9FtHzujI5y/CUs0AE45uEwAYA=="
 }
 
 SWEP.Slot = 2
@@ -36,19 +36,64 @@ SWEP.BarrelLength = 35
 
 --          Damage
 
-SWEP.DamageMax = 33
-SWEP.DamageMin = 24
-SWEP.DamageRand = 0.01
-SWEP.RangeMin = 600
-SWEP.RangeMax = 11000
-SWEP.Penetration = 5
-SWEP.PhysBulletMuzzleVelocity = 21000
+SWEP.DamageRand = 0.005
 
+-- default ss190
+
+SWEP.DamageMax = 49/2
+SWEP.DamageMin = 32/2
+SWEP.PhysBulletMuzzleVelocity = 715 /0.0254
+SWEP.RangeMin = 10
+SWEP.RangeMax = 1000 /0.0254
+
+SWEP.Penetration =      37 *2.54/100/0.0254
+SWEP.PenetrationDelta = 43/100
+SWEP.ArmorPiercing =    43/100
+SWEP.RicochetChance =   60/100
+
+
+SWEP.DamageLookupTable = {
+    {   10/0.0254, 
+    49  /2   },
+
+    {   100 /0.0254, 
+    44.69/2     },
+
+    {   200 /0.0254, 
+    40.28 /2    },
+
+    {   300 /0.0254, 
+    37.24/2     },
+
+    {   400 /0.0254, 
+    35.7 /2    },
+
+    {   500 /0.0254, 
+    34.71/2     },
+
+    {   600 /0.0254, 
+    33.95/2     },
+
+    {   700 /0.0254, 
+    33.33/2     },
+
+    {   800 /0.0254, 
+    32.78/2     },
+
+    {   900 /0.0254, 
+    32.3/2     },
+
+    {   1000 /0.0254, 
+    31.86/2    },
+}
+--
 
 --          Spread
-SWEP.SpreadMultHipFire = 5
-SWEP.Spread = 0.004
-SWEP.SpreadAddRecoil = 0
+
+SWEP.Spread = 0.005
+SWEP.SpreadSights = 0.002
+SWEP.SpreadAddRecoil = 0.005
+SWEP.SpreadMultMove = 3
 
 
 --          Recoil
@@ -98,9 +143,14 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 --          Heating
 
+SWEP.Malfunction = true 
+SWEP.MalfunctionNeverLastShoot = true 
+SWEP.MalfunctionMeanShotsToFail = 200
+SWEP.MalfunctionMeanShotsToFailMultHot = -0.1
 SWEP.Overheat = true
-SWEP.HeatCapacity = 140
+SWEP.HeatCapacity = 130
 SWEP.HeatDissipation = 4
+SWEP.HeatPerShot = 1
 SWEP.HeatLockout = false
 
 
@@ -115,7 +165,7 @@ SWEP.Firemodes = {
 
 --          Speed
 
-SWEP.AimDownSightsTime = 0.1 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.SpeedMult = 0.95
@@ -130,12 +180,8 @@ SWEP.SpeedMultBlindFire = 1
 
 SWEP.FreeAimRadius = 2
 SWEP.FreeAimRadiusSights = 0
-SWEP.Sway = 1.5
-SWEP.SwayMultSights = 0.3
-SWEP.SwayMultMidAir = 2
-SWEP.SwayMultMove = 1.15
-SWEP.SwayMultCrouch = 0.66
-SWEP.SwayMultShooting = 1.2
+SWEP.Sway = 0.25 -- How much the gun sways.
+SWEP.SwayMultMove = 3 -- How much the gun sways.
 
 
 --          Generic stats
@@ -148,7 +194,7 @@ SWEP.SecondarySupplyLimit = 4
 SWEP.ReloadInSights = true
 SWEP.SuppressEmptySuffix = true
 SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/p90mag.mdl"
-SWEP.DropMagazineSounds = { "arc9_eft_shared/weap_magdrop_plastic.wav" }
+SWEP.DropMagazineSounds = { }
 SWEP.DropMagazineAmount = 0
 SWEP.DropMagazineTime = 1.05
 SWEP.DropMagazineQCA = 4
@@ -183,8 +229,9 @@ SWEP.CrouchPos = Vector(-0.5, -2.0, -.45)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(11, 20, 4)
+SWEP.CustomizePos = Vector(11, 30, 4)
 SWEP.CustomizeSnapshotFOV = 80
+SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23) 
 
 
 --          Third person stuff
@@ -262,15 +309,14 @@ SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
 SWEP.DryFireSound = path .. "p90_trigger_empty.wav"
 
-
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
+-- SWEP.EnterSightsSound = "arc9_eft_shared/weapon_generic_rifle_spin9.wav"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
 
 
 
 ------------------------- [[[           Hooks & functions            ]]] -------------------------
 
-SWEP.Malfunction = true 
-SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 333
 
 ------------------------- [[[           Animations            ]]] -------------------------
 
@@ -600,6 +646,7 @@ function SWEP:HookP_BlockFire()
     if  !self:GetValue("HasBarrel") or 
         !self:GetValue("HasStock") or
         !self:GetValue("HasReceiver") or
+        !self:GetValue("HasAmmoooooooo") or
         !self:GetValue("HasHandle") then
             
             if self.missingpartsnotifsent < CurTime() then
@@ -705,6 +752,16 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0.15),
         Ang = Angle(0, 0, 0),
         Installed = "eft_p90_charge_std"
+    },
+
+    {
+        PrintName = "Ammunition",
+        Category = "eft_ammo_57",
+        Bone = "weapon",
+        Integral = true,
+        Installed = "eft_ammo_57_ss190",
+        Pos = Vector(0, 4, -6),
+        Ang = Angle(0, 0, 0),
     },
     
     {

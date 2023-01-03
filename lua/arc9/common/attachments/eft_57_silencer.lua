@@ -7,7 +7,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.Silenced = true 
-ATT.CustomizePos = Vector(24.7, 15, 4)
 -- ATT.CustomizePosAdd = Vector(3, 0, 0) - arctic please
 ATT.CustomizeSnapshotFOVAdd = 22
 

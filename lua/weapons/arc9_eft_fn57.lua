@@ -10,16 +10,15 @@ SWEP.PrintName = "FN Five-seveN MK2"
 
 SWEP.Class = "Pistol"
 SWEP.Trivia = {
-    Manufacturer = "FN Herstal",
-    Calibre = "5.7x28mm FN",
-    Action = "Blow",
-    Country = "Kingdom of Belgium",
-    Year = "2013"
+    Manufacturer1 = "FN Herstal",
+    Calibre2 = "5.7x28mm FN",
+    Action3 = "Blow",
+    Country4 = "Kingdom of Belgium",
+    Year5 = "2013"
 }
 
-SWEP.Credits = {
-    Author = "Darsu",
-}
+SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+
 
 SWEP.Description = [[FN Five-Seven, trademarked as the Five-seveN, is a semi-automatic pistol designed and manufactured by FN Herstal in Belgium. The pistol was developed in the early 1990s and features a cold hammer-forged barrel that is chrome-lined for extended service life. The polymer-framed Five-Seven offers single-action operation, low felt recoil, 20-round magazine capacity, and is equipped with an ambidextrous, forward-mounted manual safety, and an accessory rail that accepts tactical lights and lasers.]]
 
@@ -39,19 +38,56 @@ SWEP.RecoilAutoControlMultHipFire = 0.5
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 33 -- Damage done at point blank range
-SWEP.DamageMin = 24 -- Damage done at maximum range
 
-SWEP.DamageRand = 0.05 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+-- default ss190
 
-SWEP.RangeMin = 600 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 11000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+SWEP.DamageMax = 49/2
+SWEP.DamageMin = 32/2
+SWEP.PhysBulletMuzzleVelocity = 715 /0.0254
+SWEP.RangeMin = 10
+SWEP.RangeMax = 1000 /0.0254
 
-SWEP.Penetration = 5 -- Units of wood that can be penetrated by this gun.
+SWEP.Penetration =      37 *2.54/100/0.0254
+SWEP.PenetrationDelta = 43/100
+SWEP.ArmorPiercing =    43/100
+SWEP.RicochetChance =   60/100
 
--------------------------- PHYS BULLET BALLISTICS
 
-SWEP.PhysBulletMuzzleVelocity = 21000
+SWEP.DamageLookupTable = {
+    {   10/0.0254, 
+    49  /2   },
+
+    {   100 /0.0254, 
+    44.69/2     },
+
+    {   200 /0.0254, 
+    40.28 /2    },
+
+    {   300 /0.0254, 
+    37.24/2     },
+
+    {   400 /0.0254, 
+    35.7 /2    },
+
+    {   500 /0.0254, 
+    34.71/2     },
+
+    {   600 /0.0254, 
+    33.95/2     },
+
+    {   700 /0.0254, 
+    33.33/2     },
+
+    {   800 /0.0254, 
+    32.78/2     },
+
+    {   900 /0.0254, 
+    32.3/2     },
+
+    {   1000 /0.0254, 
+    31.86/2    },
+}
+--
 
 -------------------------- MAGAZINE
 
@@ -65,9 +101,7 @@ SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/57mag.mdl" -- Set to a string or table to drop this magazine when reloading.
-SWEP.DropMagazineSounds = {
-    "arc9_eft_shared/weap_magdrop_plastic.wav"
-} -- Table of sounds a dropped magazine should play.
+SWEP.DropMagazineSounds = {} -- Table of sounds a dropped magazine should play.
 SWEP.DropMagazineAmount = 0 -- Amount of mags to drop.
 SWEP.DropMagazineTime = 0.26
 SWEP.DropMagazineQCA = 4
@@ -75,14 +109,10 @@ SWEP.DropMagazinePos = Vector(0, -3, 0)
 SWEP.DropMagazineAng = Angle(90, 180, 90)
 SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 
-SWEP.Overheat = true
-SWEP.HeatCapacity = 30
-SWEP.HeatDissipation = 6
-SWEP.HeatLockout = false
 -------------------------- FIREMODES
 
 SWEP.RPM = 460 -- idk ?
-SWEP.Firemodes = { { Mode = 1 } }
+SWEP.Firemodes = { { Mode = -1 } }
 
 -------------------------- RECOIL
 
@@ -119,7 +149,7 @@ SWEP.VisualRecoilMultSights = 0.9
 SWEP.VisualRecoilHipFire = 1.5
 
 SWEP.VisualRecoilUp = 20 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 25 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilSide = 7 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
@@ -141,18 +171,27 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.002
-
-SWEP.SpreadAddRecoil = 0.005 -- Applied per unit of recoil.
+SWEP.Spread = 0.005
+SWEP.SpreadSights = 0.002
+SWEP.SpreadAddRecoil = 0.005
+SWEP.SpreadMultMove = 3
 
 -------------------------- HANDLING
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 333
+SWEP.MalfunctionMeanShotsToFail = 200
+SWEP.MalfunctionMeanShotsToFailMultHot = -10
+SWEP.Overheat = true
+SWEP.HeatCapacity = 80
+SWEP.HeatDissipation = 4
+SWEP.HeatPerShot = 1
+SWEP.HeatLockout = false
+
 
 SWEP.FreeAimRadius = 1 / 1.25 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.75 + 1 -- How much the gun sways.
+SWEP.Sway = 0.25 -- How much the gun sways.
+SWEP.SwayMultMove = 3 -- How much the gun sways.
 
 SWEP.SwayMultMidAir = 2
 SWEP.SwayMultMove = 1.15
@@ -206,7 +245,7 @@ SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(21.7, 19, 4.5)
+SWEP.CustomizePos = Vector(21.7, 25, 3.5)
 SWEP.CustomizeSnapshotFOV = 70
 
 -------------------------- HoldTypes
@@ -265,7 +304,7 @@ local path = "weapons/darsu_eft/57/"
 
 SWEP.ShootSound = path .. "fiveseven_fire_close.wav"
 SWEP.ShootSoundIndoor = path .. "fiveseven_fire_indoor_close.wav"
-SWEP.DistantShootSound = path .. "fiveseven_fire_distant.wav"
+SWEP.DistantShootSound = path .. "1fiveseven_fire_distant.wav"
 SWEP.DistantShootSoundIndoor = path .. "fiveseven_fire_indoor_distant.wav"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
@@ -675,6 +714,7 @@ SWEP.missingpartsnotifsent = 0
 
 function SWEP:HookP_BlockFire()
     if  !self:GetValue("HasBarrel") or 
+        !self:GetValue("HasAmmoooooooo") or 
         !self:GetValue("HasSlide") then
             
             if self.missingpartsnotifsent < CurTime() then
@@ -741,6 +781,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         RequireElements = {"eft_57_rec"},
         Installed = "eft_57_fs"
+    },
+    {
+        PrintName = "Ammunition",
+        Category = "eft_ammo_57",
+        Bone = "weapon_reciever",
+        Integral = true,
+        Installed = "eft_ammo_57_ss190",
+        Pos = Vector(0, 1, -4),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Magazine",
