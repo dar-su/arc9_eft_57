@@ -112,7 +112,7 @@ SWEP.DropMagazineVelocity = Vector(0, 0, 0)
 -------------------------- FIREMODES
 
 SWEP.RPM = 460 -- idk ?
-SWEP.Firemodes = { { Mode = -1 } }
+SWEP.Firemodes = { { Mode = 1 } }
 
 -------------------------- RECOIL
 
