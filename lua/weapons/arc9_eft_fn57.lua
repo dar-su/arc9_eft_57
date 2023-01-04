@@ -317,7 +317,7 @@ SWEP.SuppressEmptySuffix = true
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
     if !IsFirstTimePredicted() then return end
-
+    
     local ending = ""
 
     local nomag = !elements["eft_57_mag"]
@@ -348,7 +348,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
             end
         end
 
-        if ending == 2 and ARC9EFTBASE then
+        if SERVER and ending == 2 and ARC9EFTBASE then
             net.Start("arc9eftmagcheck")
             net.WriteBool(false) -- accurate or not based on mag type
             net.WriteUInt(math.min(swep:Clip1(), swep:GetMaxClip1()), 9)
@@ -366,7 +366,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     if anim == "fix" then
         rand = math.Truncate(util.SharedRandom("hi", 0, 4.99))
         -- 0 = misfire, 1 = eject, 2 = feed, 3 = bolt, 4 = bolt
-        if ARC9EFTBASE then
+        if SERVER and ARC9EFTBASE then
             net.Start("arc9eftjam")
             net.WriteUInt(rand, 3)
             net.Send(swep:GetOwner())
@@ -531,6 +531,18 @@ SWEP.Animations = {
     },
     ["switchsights"] = {
         Source = "mod_switch",
+        EventTable = {
+            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+        }
+    },
+    ["toggle_empty"] = {
+        Source = "mod_switch_empty",
+        EventTable = {
+            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+        }
+    },
+    ["switchsights_empty"] = {
+        Source = "mod_switch_empty",
         EventTable = {
             { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
         }
