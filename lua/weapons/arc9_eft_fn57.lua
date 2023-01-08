@@ -255,12 +255,12 @@ SWEP.HoldTypeSprint = "rpg"
 SWEP.HoldTypeHolstered = "rpg"
 SWEP.HoldTypeSights = "rpg"
 
-SWEP.HoldTypeCustomize = "physgun"
+SWEP.HoldTypeCustomize = "slam"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-15.5, 5.5, -4),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-6, 6, -5), -- rpg
+    TPIKPos = Vector(-2.5, 6, -5), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -280,8 +280,8 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_57.mdl"
-SWEP.ShellCorrectAng = Angle(0, 180, 0)
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/57x28.mdl"
+SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 1
 SWEP.CaseEffectQCA = 2
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
@@ -327,28 +327,18 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- 1 mag check  (!nomag)
     -- 2 slide checking  (!empty)
     
-    if anim == "inspect" then
+    if anim == "inspect" or anim == "inspect_empty" then
         swep.EFTInspectnum = (swep.EFTInspectnum or 0) + 1
         local rand = swep.EFTInspectnum
         if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
+        
+        ending = rand
 
-        if !empty and !nomag then
-            ending = rand
-        else
-            -- rand = math.max(rand, 1)
-
-            if nomag then
-                ending = rand
-                
-                if !empty then
-                    ending = rand==2 and 3 or 0
-                end
-            else
-                ending = "_empty" .. rand
-            end
+        if nomag then
+            ending = (!empty and rand == 2) and 3 or 0 -- secret inspect
         end
 
-        if SERVER and ending == 2 and ARC9EFTBASE then
+        if SERVER and ending == 2 and ARC9EFTBASE then -- mag check
             net.Start("arc9eftmagcheck")
             net.WriteBool(false) -- accurate or not based on mag type
             net.WriteUInt(math.min(swep:Clip1(), swep:GetMaxClip1()), 9)
@@ -394,7 +384,7 @@ local rst_single = {
     { s = "arc9_eft_shared/weap_round_pullout.wav", t = 5/26 },
     -- { s = randspin, t = 17/26  },
     { s = path .. "fiveseven_slider_out_slow.wav", t = 21/24 },
-    { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 43/26  },
+    { s = "arc9_eft_shared/generic_jam_shell_ remove_medium3.wav", t = 43/26  },
     { s = randspin, t = 59/26 },
     { s =  path .. "fiveseven_slider_in_fast.wav", t = 65/26 },
     { s = randspin, t = 74/26 },
@@ -626,7 +616,14 @@ SWEP.Animations = {
         }
     },
 
-    ["inspect0"] = {
+    ["inspect"] = { -- TO STUPID ARK NINE SEE WE HAVE INSPECT
+        Source = "idle",
+    },
+    ["inspect_empty"] = { -- TO STUPID ARK NINE SEE WE HAVE INSPECT
+        Source = "idle_empty",
+    },
+
+    ["inspect1"] = {
         Source = "inspect0",
         MinProgress = 0.95,
         EventTable = {
@@ -656,7 +653,7 @@ SWEP.Animations = {
         }
     },
 
-    ["inspect1"] = {
+    ["inspect0"] = {
         Source = "inspect2",
         MinProgress = 0.95,
         EventTable = {
@@ -681,14 +678,14 @@ SWEP.Animations = {
             { s = "arc9_eft_shared/weap_round_in_chamber_hand.wav", t = 1.44 },
             { s = randspin, t = 1.83 },
             { s = randspin, t = 2.3 },
-            { s =  path .. "generic_jam_shell_ remove_medium3.wav", t = 2.7  },
+            { s =  "arc9_eft_shared/generic_jam_shell_ remove_medium3.wav", t = 2.7  },
             { s = randspin, t = 3.2 },
             { s =  path .. "fiveseven_slider_in_fast.wav", t = 3.54 },
             { s = randspin, t = 3.9 },
         }
     },
 
-    ["inspect0_empty"] = {
+    ["inspect_empty0"] = {
         Source = "inspect0_empty",
         MinProgress = 0.95,
         EventTable = {
@@ -700,7 +697,7 @@ SWEP.Animations = {
         }
     },
 
-    ["inspect2_empty"] = {
+    ["inspect_empty2"] = {
         Source = "inspect1_empty",
         MinProgress = 0.95,
         EventTable = {
@@ -827,6 +824,11 @@ SWEP.Attachments = {
         Bone = "weapon_reciever",
         Pos = Vector(0, -4, -4),
         Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Custom",
+        Category = {"eft_custom_slot", "eft_custom_slot_fn57"},
+        CosmeticOnly = true,
     },
 }
 

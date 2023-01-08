@@ -243,7 +243,7 @@ SWEP.HoldType = "rpg"
 SWEP.HoldTypeSprint = "rpg"
 SWEP.HoldTypeHolstered = "rpg"
 SWEP.HoldTypeSights = "rpg"
-SWEP.HoldTypeCustomize = "physgun"
+SWEP.HoldTypeCustomize = "slam"
 
 SWEP.WorldModelOffset = {
     Pos = Vector(-6.5, 5.5, -6),
@@ -268,10 +268,10 @@ SWEP.CamQCA_Mult_ADS = 0.05
 SWEP.MuzzleParticle = "muzzleflash_smg_bizon"
 
 
-SWEP.CaseEffectQCA = 2
-SWEP.ShellModel = "models/shells/shell_57.mdl"
+SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/57x28.mdl"
+SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellScale = 1
-SWEP.ShellCorrectAng = Angle(0, 180, 0)
+SWEP.CaseEffectQCA = 2
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.BulletBones = {
@@ -580,7 +580,11 @@ SWEP.Animations = {
         EjectAt = 58/24,
     },
 
-    ["inspect0"] = {
+    ["inspect"] = { -- TO STUPID ARK NINE SEE WE HAVE INSPECT
+        Source = "idle",
+    },
+
+    ["inspect1"] = {
         Source = "inspect0",
         MinProgress = 0.95,
         EventTable = {
@@ -589,7 +593,7 @@ SWEP.Animations = {
             { s = randspin, t = 64/24 },
         }
     },
-    ["inspect1"] = {
+    ["inspect0"] = {
         Source = "inspect1",
         MinProgress = 0.95,
         EventTable = {
@@ -603,7 +607,7 @@ SWEP.Animations = {
             { s = randspin, t = 82/24 },
         }
     },
-    ["inspect1_nomag"] = {
+    ["inspect0_nomag"] = {
         Source = "inspect1_nomag",
         MinProgress = 0.95,
         EventTable = {
@@ -774,6 +778,12 @@ SWEP.Attachments = {
         Pos = Vector(0, -1, 0.5),
         Ang = Angle(0, 0, 0),
         Installed = "eft_p90_mag_std"
+    },
+    
+    {
+        PrintName = "Custom",
+        Category = {"eft_custom_slot", "eft_custom_slot_p90"},
+        CosmeticOnly = true,
     },
 }
 

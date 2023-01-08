@@ -9,6 +9,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HasAmmoooooooo = true 
 
+ATT.EFTRoundName = "5.7x28mm SB193"
+
 ATT.DamageMax = 54/2
 ATT.DamageMin = 32/2
 ATT.RecoilMult = 0.76

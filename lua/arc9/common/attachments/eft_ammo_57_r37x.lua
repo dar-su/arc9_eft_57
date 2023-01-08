@@ -9,6 +9,8 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.HasAmmoooooooo = true 
 
+ATT.EFTRoundName = "5.7x28mm R37.X"
+
 ATT.DamageMax = 81/2
 ATT.DamageMin = 44.3/2
 ATT.PhysBulletMuzzleVelocity = 724 /0.0254
