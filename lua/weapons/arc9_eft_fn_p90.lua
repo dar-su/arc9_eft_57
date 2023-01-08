@@ -346,8 +346,12 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
         
         ending = rand
 
-        if rand == 1 and nomag then
-            ending = "1_nomag"
+        if rand == 2 and nomag then
+            ending = "0_nomag"
+        elseif rand == 0 and nomag then
+            ending = 1
+            rand = 1
+            swep.EFTInspectnum = 1
         end
 
         if rand == 2 and ARC9EFTBASE and SERVER then
