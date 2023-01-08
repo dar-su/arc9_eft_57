@@ -6,6 +6,9 @@ ATT.Description = [[Ring Sight is a reflex sight for the P90 SMG, manufactured b
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
 ATT.Category = {"eft_p90_rec_mount"}
 
 ATT.Scale = 1

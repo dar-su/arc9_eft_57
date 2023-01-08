@@ -6,8 +6,15 @@ ATT.Description = [[SFN-57 is a compact, high-performance sound suppressor for m
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
-ATT.Silenced = true 
--- ATT.CustomizePosAdd = Vector(3, 0, 0) - arctic please
+
+ATT.SpreadMult = 0.98
+ATT.VisualRecoilMult = 0.91
+ATT.HeatCapacityMult = 0.87
+ATT.PhysBulletMuzzleVelocityMult = 1.015
+ATT.EFTErgoAdd = -15
+ATT.CustomCons = { Ergonomics = "-15" }
+
+ATT.Silenced = true
 ATT.CustomizeSnapshotFOVAdd = 22
 
 local path = "weapons/darsu_eft/57/"

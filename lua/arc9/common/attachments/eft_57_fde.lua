@@ -6,4 +6,7 @@ ATT.Description = [[This model features a Flat Dark Earth colored frame.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+-- ATT.EFTErgoAdd = 90
+-- ATT.CustomPros = { Ergonomics = "+90" }
+
 ATT.Category = {"eft_57_color"}

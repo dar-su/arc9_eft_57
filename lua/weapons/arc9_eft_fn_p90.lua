@@ -30,6 +30,9 @@ SWEP.ViewModelFOVBase = 62
 SWEP.MirrorVMWM = true
 SWEP.DefaultBodygroups = "00000000000100"
 SWEP.BarrelLength = 35
+SWEP.SpreadMultHipFire = 5
+SWEP.RecoilMultHipFire = 1.1
+SWEP.RecoilAutoControlMultHipFire = 0.5
 
 
 ------------------------- [[[           STATS            ]]] -------------------------
@@ -145,10 +148,10 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 200
+SWEP.MalfunctionMeanShotsToFail = 300
 SWEP.MalfunctionMeanShotsToFailMultHot = -0.1
 SWEP.Overheat = true
-SWEP.HeatCapacity = 130
+SWEP.HeatCapacity = 220
 SWEP.HeatDissipation = 4
 SWEP.HeatPerShot = 1
 SWEP.HeatLockout = false
@@ -773,3 +776,7 @@ SWEP.Attachments = {
         Installed = "eft_p90_mag_std"
     },
 }
+
+SWEP.EFTErgo = 60
+
+SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook

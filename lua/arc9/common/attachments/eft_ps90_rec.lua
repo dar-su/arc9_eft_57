@@ -3,6 +3,11 @@ ATT.CompactName = "PS90"
 ATT.Icon = Material("entities/eft_p90_attachments/top_ps.png", "mips smooth")
 ATT.Description = [[A regular upper receiver for the PS90, produced by Fabrique Nationale Herstal.]]
 
+ATT.EFTErgoAdd = -5
+ATT.CustomCons = { Ergonomics = "-5" }
+ATT.HeatCapacityMult = 1.05
+ATT.HeatDissipationMult = 1.052
+
 ATT.HasReceiver = true 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

@@ -5,6 +5,8 @@ ATT.Description = [[A regular slide for the Five-seveN MK2 pistol, manufactured 
 
 ATT.HasSlide = true
 
+ATT.EFTErgoAdd = 3
+ATT.CustomPros = { Ergonomics = "+3" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

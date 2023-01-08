@@ -6,6 +6,9 @@ ATT.Description = [[The FN top rail allows installation of additional equipment 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
 ATT.Category = {"eft_p90_rec_mount"}
 
 

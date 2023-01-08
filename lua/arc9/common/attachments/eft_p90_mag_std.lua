@@ -6,6 +6,9 @@ ATT.Description = [[A 50-round polymer magazine for the 5.7x28mm FN P90 SMG.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 
+ATT.EFTErgoAdd = -5
+ATT.CustomCons = { Ergonomics = "-5" }
+
 ATT.ChamberSize = 1
 ATT.ClipSize = 50
 ATT.DropMagazineAmount = 1

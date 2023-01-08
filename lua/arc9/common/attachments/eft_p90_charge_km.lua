@@ -5,6 +5,8 @@ ATT.Description = [[An ergomomic folding charging handle for FN P90, manufacture
 
 ATT.HasHandle = true 
 
+ATT.EFTErgoAdd = 1
+ATT.CustomPros = { Ergonomics = "+1" }
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"

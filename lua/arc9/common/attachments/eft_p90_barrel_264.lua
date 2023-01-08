@@ -5,6 +5,11 @@ ATT.Description = [[A 10.5 inch (264mm) barrel for P90 based weapons, chambered 
 
 ATT.HasBarrel = true 
 
+ATT.VisualRecoilMult = 0.95
+ATT.EFTErgoAdd = -3
+ATT.CustomCons = { Ergonomics = "-3" }
+ATT.PhysBulletMuzzleVelocityMult = 1.012
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 

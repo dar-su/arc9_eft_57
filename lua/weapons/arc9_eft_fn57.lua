@@ -144,7 +144,7 @@ SWEP.RecoilKick = 0.4
 
 SWEP.UseVisualRecoil = true 
 
-SWEP.VisualRecoil = 1
+SWEP.VisualRecoil = 1.03
 SWEP.VisualRecoilMultSights = 0.9
 SWEP.VisualRecoilHipFire = 1.5
 
@@ -180,7 +180,7 @@ SWEP.SpreadMultMove = 3
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 200
+SWEP.MalfunctionMeanShotsToFail = 350
 SWEP.MalfunctionMeanShotsToFailMultHot = -10
 SWEP.Overheat = true
 SWEP.HeatCapacity = 80
@@ -304,7 +304,7 @@ local path = "weapons/darsu_eft/57/"
 
 SWEP.ShootSound = path .. "fiveseven_fire_close.wav"
 SWEP.ShootSoundIndoor = path .. "fiveseven_fire_indoor_close.wav"
-SWEP.DistantShootSound = path .. "1fiveseven_fire_distant.wav"
+SWEP.DistantShootSound = path .. "fiveseven_fire_distant.wav"
 SWEP.DistantShootSoundIndoor = path .. "fiveseven_fire_indoor_distant.wav"
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
@@ -829,3 +829,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
 }
+
+SWEP.EFTErgo = 86
+
+SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook

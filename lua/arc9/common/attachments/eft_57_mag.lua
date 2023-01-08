@@ -11,4 +11,7 @@ ATT.ClipSize = 20
 ATT.DropMagazineAmount = 1
 ATT.SuppressEmptySuffix = false 
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+
 ATT.Category = {"eft_57_mag"}

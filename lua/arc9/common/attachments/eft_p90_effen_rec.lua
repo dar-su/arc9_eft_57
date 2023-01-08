@@ -3,6 +3,11 @@ ATT.CompactName = "EFFEN 90"
 ATT.Icon = Material("entities/eft_p90_attachments/top_effen.png", "mips smooth")
 ATT.Description = [[EFFEN 90 is a low-profile upper receiver for the P90 submachine gun, manufactured by Fabrique Nationale Herstal.]]
 
+ATT.EFTErgoAdd = -1
+ATT.CustomCons = { Ergonomics = "-1" }
+ATT.HeatCapacityMult = 1.04
+ATT.HeatDissipationMult = 1.048
+
 ATT.HasReceiver = true 
 
 ATT.SortOrder = 0
