@@ -826,9 +826,9 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Custom",
+        PrintName = "Custom slot",
         Category = {"eft_custom_slot", "eft_custom_slot_fn57"},
-        CosmeticOnly = true,
+        -- CosmeticOnly = true,
     },
 }
 

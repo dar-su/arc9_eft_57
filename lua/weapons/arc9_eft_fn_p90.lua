@@ -785,9 +785,9 @@ SWEP.Attachments = {
     },
     
     {
-        PrintName = "Custom",
+        PrintName = "Custom slot",
         Category = {"eft_custom_slot", "eft_custom_slot_p90"},
-        CosmeticOnly = true,
+        -- CosmeticOnly = true,
     },
 }
 
