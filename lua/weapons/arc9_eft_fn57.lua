@@ -180,8 +180,8 @@ SWEP.SpreadMultMove = 3
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 350
-SWEP.MalfunctionMeanShotsToFailMultHot = -10
+SWEP.MalfunctionMeanShotsToFail = 350*2
+SWEP.MalfunctionMeanShotsToFailMultHot = -10*2
 SWEP.Overheat = true
 SWEP.HeatCapacity = 80
 SWEP.HeatDissipation = 4

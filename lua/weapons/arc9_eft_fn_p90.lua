@@ -148,8 +148,8 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 SWEP.Malfunction = true 
 SWEP.MalfunctionNeverLastShoot = true 
-SWEP.MalfunctionMeanShotsToFail = 300
-SWEP.MalfunctionMeanShotsToFailMultHot = -0.1
+SWEP.MalfunctionMeanShotsToFail = 300*2
+SWEP.MalfunctionMeanShotsToFailMultHot = -0.1*2
 SWEP.Overheat = true
 SWEP.HeatCapacity = 220
 SWEP.HeatDissipation = 4
