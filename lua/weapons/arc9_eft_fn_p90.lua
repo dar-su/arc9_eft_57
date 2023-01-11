@@ -304,9 +304,9 @@ SWEP.DistantShootSound = { path .. "fire/p90_distant1.wav", path .. "fire/p90_di
 SWEP.DistantShootSoundIndoor = { path .. "fire/p90_indoor_distant1.wav", path .. "fire/p90_indoor_distant2.wav" }
 
 SWEP.ShootSoundSilenced = { path .. "fire/p90_silenced1.wav", path .. "fire/p90_silenced2.wav" }
-SWEP.ShootSoundIndoorSilenced = { path .. "fire/p90_indoor_silenced1.wav", path .. "fire/p90_indoor_silenced2.wav" }
+SWEP.ShootSoundSilencedIndoor = { path .. "fire/p90_indoor_silenced1.wav", path .. "fire/p90_indoor_silenced2.wav" }
 SWEP.DistantShootSoundSilenced = { path .. "fire/p90_distant_silenced1.wav", path .. "fire/p90_distant_silenced2.wav" }
-SWEP.DistantShootSoundIndoorSilenced = { path .. "fire/p90_indoor_distant_silenced1.wav", path .. "fire/p90_indoor_distant_silenced2.wav" }
+SWEP.DistantShootSoundSilencedIndoor = { path .. "fire/p90_indoor_distant_silenced1.wav", path .. "fire/p90_indoor_distant_silenced2.wav" }
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
