@@ -325,7 +325,6 @@ SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
-    if !IsFirstTimePredicted() then return end
 
     local ending = ""
 
@@ -340,7 +339,10 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- 2 slide checking
     
     if anim == "inspect" then
-        swep.EFTInspectnum = (swep.EFTInspectnum or 0) + 1
+        swep.EFTInspectnum = swep.EFTInspectnum or 0
+        if IsFirstTimePredicted() then
+            swep.EFTInspectnum = swep.EFTInspectnum + 1
+        end
         local rand = swep.EFTInspectnum
         if rand == 3 then swep.EFTInspectnum = 0 rand = 0 end
         
