@@ -15,4 +15,7 @@ ATT.CustomCons = { Ergonomics = "-17" }
 ATT.Silencer = true 
 ATT.CustomizePos = Vector(14.5, 30, 4)
 
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleEffectQCA = 5
+
 ATT.Category = {"eft_p90_silencerr"}

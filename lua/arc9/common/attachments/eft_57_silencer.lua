@@ -23,4 +23,7 @@ ATT.DistantShootSound = path .. "fiveseven_fire_silenced_distant.wav"
 ATT.ShootSoundIndoor = path .. "fiveseven_fire_silenced_indoor_close.wav"
 ATT.DistantShootSoundIndoor = path .. "fiveseven_fire_silenced_indoor_distant.wav"
 
+ATT.MuzzleParticle = "muzzleflash_suppressed"
+ATT.MuzzleEffectQCA = 5
+
 ATT.Category = {"eft_57_muzzle"}
