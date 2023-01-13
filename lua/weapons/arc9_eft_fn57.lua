@@ -835,5 +835,8 @@ SWEP.Attachments = {
 }
 
 SWEP.EFTErgo = 86
-
-SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+if ARC9EFTBASE then
+    SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+else
+    print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
+end
