@@ -239,7 +239,7 @@ SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.SprintAng = Angle(0, 20.6,  -15.2)
-SWEP.SprintPos = Vector(0.5, -1.1, -13.5)
+SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
 
 SWEP.CrouchPos = Vector(-0.7, -3.8, .35)
 SWEP.CrouchAng = Angle(0, 0, -1)
