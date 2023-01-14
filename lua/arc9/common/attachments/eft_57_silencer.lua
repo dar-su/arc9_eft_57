@@ -16,6 +16,7 @@ ATT.CustomCons = { Ergonomics = "-15" }
 
 ATT.Silenced = true
 ATT.CustomizeSnapshotFOVAdd = 22
+ATT.BarrelLengthAdd = 5
 
 local path = "weapons/darsu_eft/57/"
 ATT.ShootSound = path .. "fiveseven_fire_silenced_close.wav"
@@ -25,5 +26,6 @@ ATT.DistantShootSoundIndoor = path .. "fiveseven_fire_silenced_indoor_distant.wa
 
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.MuzzleEffectQCA = 5
+ATT.NoFlash = true
 
 ATT.Category = {"eft_57_muzzle"}

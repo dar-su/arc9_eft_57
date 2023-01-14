@@ -12,6 +12,20 @@ ATT.CustomCons = { Ergonomics = "-1" }
 ATT.Category = {"eft_p90_rec_mount"}
 
 
+ATT.Sights = {
+    {
+        -- Pos = Vector(-5, 0, -2.5),
+        Pos = Vector(0, -5, -2.3),
+        Ang = Angle(0, -0.09, 0),
+        Magnification = 1.25,
+        ViewModelFOV = 57,
+        IsIronSight = true
+    }
+}
+
+ATT.ModelAngleOffset = Angle(0, -90, 0)
+ATT.ModelOffset = Vector(-18.75, 0, -1.38)
+
 ATT.Attachments = {
     {
         PrintName = "Optic",

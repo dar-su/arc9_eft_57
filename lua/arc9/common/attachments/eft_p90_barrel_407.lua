@@ -15,5 +15,6 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
 ATT.CustomizePos = Vector(14.5, 22, 4)
 ATT.MuzzleEffectQCA = 5
+ATT.BarrelLengthAdd = 5
 
 ATT.Category = {"eft_p90_barrel"}

@@ -26,7 +26,7 @@ SWEP.Description = [[FN Five-Seven, trademarked as the Five-seveN, is a semi-aut
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_fn57.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_fiveseven.mdl"
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 SWEP.MirrorVMWM = true
 -- SWEP.DefaultBodygroups = "0001110101101"

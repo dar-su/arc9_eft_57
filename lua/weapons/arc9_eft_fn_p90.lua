@@ -216,7 +216,7 @@ SWEP.TracerColor = Color(255, 225, 200)
 --          Positions and offsets
 
 SWEP.IronSights = {
-    Pos = Vector(-4.28, -7, 1.01),
+    Pos = Vector(-3.6, -7, 1.22),
     Ang = Angle(0, 0.09, 0),
     Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
     Magnification = 1.1,
@@ -391,7 +391,7 @@ SWEP.ReloadHideBoneTables = {
 }
 
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
-local jamm = { "weapons/darsu_eft/57/pistol_jam_slidelock_try1.wav", "weapons/darsu_eft/57/pistol_jam_slidelock_try2.wav", "weapons/darsu_eft/57/pistol_jam_slidelock_try3.wav" }
+local jamm = { "arc9_eft_shared/pistol_jam_slidelock_try1.wav", "arc9_eft_shared/pistol_jam_slidelock_try2.wav", "arc9_eft_shared/pistol_jam_slidelock_try3.wav" }
 
 SWEP.Animations = {
     ["idle"] = {
@@ -443,7 +443,7 @@ SWEP.Animations = {
             { s = path .. "p90_bolt_out.wav", t = 18/26 },
             { s = randspin, t = 25/26 },
             { s = "arc9_eft_shared/weap_round_pullout.wav", t = 35/26 },
-            { s = "weapons/darsu_eft/57/generic_jam_shell_ remove_medium3.wav", t = 50/26  },
+            { s = "arc9_eft_shared/generic_jam_shell_ remove_medium3.wav", t = 50/26  },
             { s = randspin, t = 63/26 },
             { s = path .. "p90_bolt_in.wav", t = 73/26 },
             { s = randspin, t = 78/26 },
@@ -470,7 +470,7 @@ SWEP.Animations = {
         EventTable = {
             { s = randspin, t = 6/28 },
             { s = path .. "p90_mag_out.wav", t = 14/28 },
-            { s = "weapons/darsu_eft/57/fiveseven_mag_rattle3.wav", t = 23/28 },
+            { s = "arc9_eft_shared/fiveseven_mag_rattle3.wav", t = 23/28 },
             { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 34/28 },
             { s = path .. "p90_mag_in_01_slide.wav", t = 48/28 },
             { s = path .. "p90_mag_in_02_down.wav", t = 54/28 },
@@ -523,7 +523,7 @@ SWEP.Animations = {
         EventTable = {
             { s = randspin, t = 6/24, ind = 11, bg = 1 },
             { s = path .. "p90_mag_out.wav", t = 22/24 },
-            { s = "weapons/darsu_eft/57/fiveseven_mag_rattle3.wav", t = 36/24 },
+            { s = "arc9_eft_shared/fiveseven_mag_rattle3.wav", t = 36/24 },
             { s = randspin, t = 42/24 },
             { s = path .. "p90_bolt_out.wav", t = 60/24 },            
             { s = jamm, t = 65/24 },
