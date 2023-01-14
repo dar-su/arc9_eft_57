@@ -1,5 +1,4 @@
-// ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE MATERIALS
-// Auto converter by Darsu, material setup and vmt by Mal0
+//h?rjenger;) was here 
 
 "VertexLitGeneric"
 {
@@ -8,13 +7,16 @@
 	"$phongexponenttexture" "models/weapons/arc9/darsu_eft/57/mag_57_fn_five_seven_std_57x28_20_LOD0_gloss"
 
 	"$phong" "1"
-	"$phongboost" "2"
-	"$phongexponent" "10"		
+	"$phongboost" "9"	
 	"$normalmapalphaenvmapmask" 	"1"
-	"$phongfresnelranges"	"[0.4 0.8 1]"
+	"$phongfresnelranges"	"[0.5 0.8 1]"
 	"$phongalbedotint" 			"1"
 
 	"$rimlight" "1"
+	"$rimlightboost" "5"
 	"$rimlightexponent" "4"
 	"$rimmask" "1"
+
+	"$envmap"	"env_cubemap"
+	"$envmaptint"	"[ 0.005 0.005 0.005]"
 }
