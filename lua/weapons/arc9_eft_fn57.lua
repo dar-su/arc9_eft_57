@@ -379,6 +379,8 @@ SWEP.ReloadHideBoneTables = {
 
 
 local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
+local pouchin = {"arc9_eft_shared/generic_mag_pouch_in1.wav","arc9_eft_shared/generic_mag_pouch_in2.wav","arc9_eft_shared/generic_mag_pouch_in3.wav","arc9_eft_shared/generic_mag_pouch_in4.wav","arc9_eft_shared/generic_mag_pouch_in5.wav","arc9_eft_shared/generic_mag_pouch_in6.wav","arc9_eft_shared/generic_mag_pouch_in7.wav"}
+local pouchout = {"arc9_eft_shared/generic_mag_pouch_out1.wav","arc9_eft_shared/generic_mag_pouch_out2.wav","arc9_eft_shared/generic_mag_pouch_out3.wav","arc9_eft_shared/generic_mag_pouch_out4.wav","arc9_eft_shared/generic_mag_pouch_out5.wav","arc9_eft_shared/generic_mag_pouch_out6.wav","arc9_eft_shared/generic_mag_pouch_out7.wav"}
 
 local rst_single = {
     -- { s = randspin, t = 3/26 },    
@@ -401,8 +403,10 @@ local rst_def = {
 
 
     { s =  path .. "fiveseven_mag_rattle.wav", t = 25/28 },
-    { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 35/28 },
+    -- { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 35/28 },
     -- { s = "arc9_eft_shared/weap_mag_pullout.wav", t = 46/24 },
+    { s = pouchin, t = 1.08 },
+    { s = pouchout, t = 1.55 },
 
     { s =  path .. "fiveseven_mag_rattle2.wav", t = 56/28 },
     { s =  path .. "fiveseven_mag_in.wav", t = 62/28 },
@@ -415,7 +419,7 @@ local rst_empty = {
     { s = "arc9_eft_shared/weap_handoff.wav", t = 6/28 },
     { s =  path .. "fiveseven_mag_releasebutton.wav", t = 9/28 },
     { s =  path .. "fiveseven_mag_out.wav", t = 12/28 },
-    { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 23/28 },
+    { s = pouchout, t = 0.95 },
     { s =  randspin, t = 35/28 },
     { s =  path .. "fiveseven_mag_rattle3.wav", t = 41/28 },
     { s =  path .. "fiveseven_mag_in.wav", t = 46/28 },
@@ -439,7 +443,7 @@ SWEP.Animations = {
     ["ready"] = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/pm_draw.wav", t = 0 },
             { s = path .. "fiveseven_slider_in_fast.wav", t = 16/24 },
             { s = path .. "fiveseven_slider_out_fast.wav", t = 20/24 },
         },
@@ -448,25 +452,25 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/pm_draw.wav", t = 0 },
         }
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/pm_draw.wav", t = 0 },
         }
     },
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            { s = "arc9_eft_shared/weap_out.wav", t = 0 },
+            { s = "arc9_eft_shared/pm_holster.wav", t = 0 },
         }
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         EventTable = {
-            { s = "arc9_eft_shared/weap_out.wav", t = 0 },
+            { s = "arc9_eft_shared/pm_holster.wav", t = 0 },
         }
     },
 
@@ -482,10 +486,10 @@ SWEP.Animations = {
             { s = path .. "fiveseven_slider_out_fast.wav", t = 0.05 },
         }
     },
-    ["fire_dry"] = {
+    ["dryfire"] = {
         Source = "fire_dry",
     },
-    ["fire_dry_empty"] = {
+    ["dryfire_empty"] = {
         Source = "fire_dry_empty",
     },
 
