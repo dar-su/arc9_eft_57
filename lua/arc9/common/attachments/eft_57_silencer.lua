@@ -9,6 +9,7 @@ ATT.MenuCategory = "ARC9 - EFT Attachments"
 
 ATT.SpreadMult = 0.98
 ATT.VisualRecoilMult = 0.91
+ATT.RecoilMult = 0.91
 ATT.HeatCapacityMult = 0.87
 ATT.PhysBulletMuzzleVelocityMult = 1.015
 ATT.EFTErgoAdd = -15

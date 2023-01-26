@@ -5,6 +5,7 @@ ATT.Description = [[A regular threaded barrel for the FN Five-seveN pistol, manu
 
 ATT.HasBarrel = true
 ATT.VisualRecoilMult = 0.97
+ATT.RecoilMult = 0.97
 ATT.PhysBulletMuzzleVelocityMult = 0.9873
 
 ATT.SortOrder = 0

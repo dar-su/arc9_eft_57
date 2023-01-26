@@ -4,6 +4,7 @@ ATT.Icon = Material("entities/eft_p90_attachments/muzzle.png", "mips smooth")
 ATT.Description = [[A regular flash hider for the P90 SMG. Manufactured by Fabrique Nationale Herstal.]]
 
 ATT.VisualRecoilMult = 0.93
+ATT.RecoilMult = 0.93
 ATT.EFTErgoAdd = -1
 ATT.CustomCons = { Ergonomics = "-1" }
 ATT.HeatCapacityMult = 1.01

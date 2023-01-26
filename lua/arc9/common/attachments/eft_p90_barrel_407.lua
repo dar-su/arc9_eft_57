@@ -6,6 +6,7 @@ ATT.Description = [[A 16 inch (407mm) barrel for P90 based weapons, chambered in
 ATT.HasBarrel = true 
 
 ATT.VisualRecoilMult = 0.87
+ATT.RecoilMult = 0.87
 ATT.EFTErgoAdd = -13
 ATT.CustomCons = { Ergonomics = "-13" }
 ATT.HeatCapacityMult = 0.9

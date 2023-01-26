@@ -15,6 +15,7 @@ ATT.DamageMax = 54/2
 ATT.DamageMin = 32/2
 ATT.RecoilMult = 0.76
 ATT.VisualRecoilMult = 0.76
+ATT.RecoilMult = 0.76
 ATT.PhysBulletMuzzleVelocity = 299 /0.0254
 ATT.RangeMin = 10
 ATT.RangeMax = 1000 /0.0254
