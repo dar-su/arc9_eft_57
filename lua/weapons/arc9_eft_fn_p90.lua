@@ -183,8 +183,13 @@ SWEP.SpeedMultBlindFire = 1
 
 SWEP.FreeAimRadius = 2
 SWEP.FreeAimRadiusSights = 0
-SWEP.Sway = 0.25 -- How much the gun sways.
-SWEP.SwayMultMove = 3 -- How much the gun sways.
+
+SWEP.Sway = 1
+SWEP.SwayMove = 0.5
+SWEP.SwayMidAir = 10
+SWEP.SwayMultCrouch = 0.75
+SWEP.SwayMultHipFire = 0.01
+SWEP.SwayMultSights = 0.15
 
 
 --          Generic stats

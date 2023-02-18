@@ -189,18 +189,15 @@ SWEP.HeatPerShot = 1
 SWEP.HeatLockout = false
 
 
-SWEP.FreeAimRadius = 1 / 1.25 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.25 -- How much the gun sways.
-SWEP.SwayMultMove = 3 -- How much the gun sways.
-
-SWEP.SwayMultMidAir = 2
-SWEP.SwayMultMove = 1.15
-SWEP.SwayMultCrouch = 0.66
-SWEP.SwayMultShooting = 1.2
-
+SWEP.FreeAimRadius = 2
 SWEP.FreeAimRadiusSights = 0
 
-SWEP.SwayMultSights = 0.3
+SWEP.Sway = 1
+SWEP.SwayMove = 0.5
+SWEP.SwayMidAir = 10
+SWEP.SwayMultCrouch = 0.75
+SWEP.SwayMultHipFire = 0.01
+SWEP.SwayMultSights = 0.15
 
 SWEP.AimDownSightsTime = 0.1 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
