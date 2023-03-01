@@ -101,7 +101,7 @@ SWEP.SpreadMultMove = 3
 
 --          Recoil
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.35
 SWEP.RecoilCrouchMult = 0.5
 SWEP.VisualRecoilCrouchMult = 0.5
 
@@ -109,30 +109,36 @@ SWEP.RecoilUp = 0.1
 SWEP.RecoilSide = 0.015
 
 SWEP.RecoilRandomUp = 0.06
-SWEP.RecoilRandomSide = 0.01
+SWEP.RecoilRandomSide = 0.02
 
-SWEP.RecoilDissipationRate = 15 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
-SWEP.RecoilAutoControl = 3 -- Multiplier for automatic recoil control.
+SWEP.RecoilDissipationRate = 31
+SWEP.RecoilAutoControl = 10
+SWEP.RecoilResetTime = 0.03
+SWEP.RecoilFullResetTime = 0.15
 
 
 SWEP.ViewRecoil = 1
 SWEP.ViewRecoilUpMult = 1000
-SWEP.ViewRecoilUpMultSights = 100
+SWEP.ViewRecoilUpMultSights = 500
 SWEP.ViewRecoilSideMult = 1000
+
+SWEP.RecoilKick = 0.05 -- Camera recoil
+SWEP.RecoilKickDamping = 10 -- Camera recoil damping
+
+
 
 SWEP.UseVisualRecoil = true 
 
 SWEP.VisualRecoil = 0.7
 SWEP.VisualRecoilMultSights = 0.5
 
-SWEP.VisualRecoilUp = 6 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilUp = 11 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 4 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
+SWEP.VisualRecoilRoll = 33 -- Roll tilt for visual recoil.
 
-SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
+SWEP.VisualRecoilCenter = Vector(2, 15, 2) -- The "axis" of visual recoil. Where your hand is.
 
-SWEP.VisualRecoilPunch = 3 -- How far back visual recoil moves the gun.
+SWEP.VisualRecoilPunch = 4.5 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = -0.75
 SWEP.VisualRecoilPositionBumpUp = -0.01
 
@@ -140,8 +146,24 @@ SWEP.VisualRecoilSpringPunchDamping = 12
 SWEP.VisualRecoilDampingConst = 260
 SWEP.VisualRecoilSpringMagnitude = 1
 
-SWEP.RecoilKick = 0.05 -- Camera recoil
-SWEP.RecoilKickDamping = 10 -- Camera recoil damping
+
+SWEP.VisualRecoilThinkFunc = function(springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING, recamount)
+    if recamount > 6 then
+        recamount = math.Clamp((recamount - 6) / 33, 0, 1)
+        return springconstant * math.max(1, 20 * recamount), VisualRecoilSpringMagnitude * 1, PUNCH_DAMPING * 1
+    end
+    return springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING
+end
+
+
+SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount)
+    if recamount > 5 then
+        recamount = 1.25 - math.Clamp((recamount - 5) / 5, 0, 1)
+        
+        return up * recamount, side * 7, roll, punch * 0.9
+    end
+    return up, side, roll, punch
+end
 
 
 --          Heating

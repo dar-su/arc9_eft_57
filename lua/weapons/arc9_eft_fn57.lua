@@ -116,29 +116,21 @@ SWEP.Firemodes = { { Mode = 1 } }
 
 -------------------------- RECOIL
 
--- General recoil multiplier
-SWEP.Recoil = 1
+SWEP.Recoil = 0.1
 SWEP.RecoilCrouchMult = 0.5
 SWEP.VisualRecoilCrouchMult = 0.5
+SWEP.RecoilUp = 0.1
+SWEP.RecoilSide = 0.015
+SWEP.RecoilRandomUp = 0.06
+SWEP.RecoilRandomSide = 0.01
+SWEP.RecoilDissipationRate = 155
+SWEP.RecoilResetTime = 0.05
+SWEP.RecoilAutoControl = 5
+SWEP.RecoilKick = 0.4
+
 SWEP.ViewRecoil = true
 SWEP.ViewRecoilUpMult = 250
 SWEP.ViewRecoilSideMult = 300
--- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.1 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.015 -- Multiplier for vertical recoil
-
--- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
--- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.06
-SWEP.RecoilRandomSide = 0.01
-
-SWEP.RecoilDissipationRate = 15 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
-
-SWEP.RecoilAutoControl = 5 -- Multiplier for automatic recoil control.
-
-SWEP.RecoilKick = 0.4
-
 
 
 
@@ -148,18 +140,18 @@ SWEP.VisualRecoil = 1.03
 SWEP.VisualRecoilMultSights = 0.9
 SWEP.VisualRecoilHipFire = 1.5
 
-SWEP.VisualRecoilUp = 20 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilUp = 30 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 7 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
 
-SWEP.VisualRecoilCenter = Vector(2, 16, 2) -- The "axis" of visual recoil. Where your hand is.
+SWEP.VisualRecoilCenter = Vector(2, 17, 2) -- The "axis" of visual recoil. Where your hand is.
 
 SWEP.VisualRecoilPunch = 5 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = 0.5
 SWEP.VisualRecoilPositionBumpUp = 0
 
 SWEP.VisualRecoilSpringPunchDamping = 11
-SWEP.VisualRecoilDampingConst = 300
+SWEP.VisualRecoilDampingConst = 500
 SWEP.VisualRecoilSpringMagnitude = 1
 
 
