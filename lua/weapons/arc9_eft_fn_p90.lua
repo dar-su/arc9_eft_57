@@ -132,7 +132,7 @@ SWEP.UseVisualRecoil = true
 SWEP.VisualRecoil = 0.7
 SWEP.VisualRecoilMultSights = 0.5
 
-SWEP.VisualRecoilUp = 11 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilUp = 21 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 4 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 33 -- Roll tilt for visual recoil.
 
@@ -142,15 +142,15 @@ SWEP.VisualRecoilPunch = 4.5 -- How far back visual recoil moves the gun.
 SWEP.VisualRecoilPunchMultSights = -0.75
 SWEP.VisualRecoilPositionBumpUp = -0.01
 
-SWEP.VisualRecoilSpringPunchDamping = 12
-SWEP.VisualRecoilDampingConst = 260
-SWEP.VisualRecoilSpringMagnitude = 1
+SWEP.VisualRecoilSpringPunchDamping = 12 / 2.67
+SWEP.VisualRecoilDampingConst = 260* 1.67
+SWEP.VisualRecoilSpringMagnitude = 1 / 1.67
 
 
 SWEP.VisualRecoilThinkFunc = function(springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING, recamount)
     if recamount > 6 then
         recamount = math.Clamp((recamount - 6) / 33, 0, 1)
-        return springconstant * math.max(1, 20 * recamount), VisualRecoilSpringMagnitude * 1, PUNCH_DAMPING * 1
+        return springconstant * math.max(1, 10 * recamount), VisualRecoilSpringMagnitude * 1, PUNCH_DAMPING * 1
     end
     return springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING
 end
@@ -158,7 +158,7 @@ end
 
 SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount)
     if recamount > 5 then
-        recamount = 1.25 - math.Clamp((recamount - 5) / 5, 0, 1)
+        recamount = 1.25 - math.Clamp((recamount - 5) / 10, 0, 1)
         
         return up * recamount, side * 7, roll, punch * 0.9
     end
