@@ -32,7 +32,6 @@ SWEP.MirrorVMWM = true
 -- SWEP.DefaultBodygroups = "0001110101101"
 SWEP.DefaultBodygroups = "00000000000000"
 SWEP.BarrelLength = 25
-SWEP.SpreadMultHipFire = 5
 SWEP.RecoilMultHipFire = 1.1
 SWEP.RecoilAutoControlMultHipFire = 0.5
 
@@ -163,10 +162,10 @@ SWEP.RecoilKickDamping = 10 -- Camera recoil damping
 
 -------------------------- SPREAD
 
-SWEP.Spread = 0.005
 SWEP.SpreadSights = 0.002
-SWEP.SpreadAddRecoil = 0.005
-SWEP.SpreadMultMove = 3
+SWEP.SpreadAddHipFire = 0.02
+SWEP.SpreadMultMove = 1.5
+SWEP.SpreadAddMove = 0.015
 
 -------------------------- HANDLING
 

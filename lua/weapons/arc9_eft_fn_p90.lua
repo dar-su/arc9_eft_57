@@ -30,7 +30,6 @@ SWEP.ViewModelFOVBase = 62
 SWEP.MirrorVMWM = true
 SWEP.DefaultBodygroups = "00000000000100"
 SWEP.BarrelLength = 35
-SWEP.SpreadMultHipFire = 5
 -- SWEP.RecoilMultHipFire = 1.1
 -- SWEP.RecoilAutoControlMultHipFire = 0.5
 
@@ -93,10 +92,10 @@ SWEP.DamageLookupTable = {
 
 --          Spread
 
-SWEP.Spread = 0.005
-SWEP.SpreadSights = 0.002
-SWEP.SpreadAddRecoil = 0.005
-SWEP.SpreadMultMove = 3
+SWEP.Spread = 8.594 * ARC9.MOAToAcc
+SWEP.SpreadAddHipFire = 0.02
+SWEP.SpreadMultMove = 1.5
+SWEP.SpreadAddMove = 0.015
 
 
 --          Recoil
