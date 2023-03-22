@@ -187,8 +187,13 @@ SWEP.Sway = 1
 SWEP.SwayMove = 0.5
 SWEP.SwayMidAir = 10
 SWEP.SwayMultCrouch = 0.75
-SWEP.SwayMultHipFire = 0.01
-SWEP.SwayMultSights = 0.15
+SWEP.SwayMultHipFire = 0.2
+SWEP.SwayMultSights = 0.25
+SWEP.HoldBreathTime = 40
+SWEP.RestoreBreathTime = 30
+SWEP.BreathInSound = false 
+SWEP.BreathOutSound = false
+SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.wav"
 
 SWEP.AimDownSightsTime = 0.1 -- How long it takes to go from hip fire to aiming down sights.
 SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
@@ -300,6 +305,9 @@ SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = ""-- we will have own in sound tables
 
 SWEP.DryFireSound = "arc9_eft_shared/weap_trigger_empty.wav"
+
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
 
 SWEP.SuppressEmptySuffix = true 
 
@@ -830,6 +838,11 @@ SWEP.Attachments = {
 SWEP.EFTErgo = 86
 if ARC9EFTBASE then
     SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook
+    if ARC9EFT.ErgoBreathHook then
+        SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook
+        SWEP.HookP_TranslateSound = ARC9EFT.ErgoAdsVolume
+    end
 else
     print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
 end
+SWEP.AimDownSightsTimeMultShooting = 4
