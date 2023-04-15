@@ -848,3 +848,6 @@ else
     print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
 end
 SWEP.AimDownSightsTimeMultShooting = 4
+
+SWEP.RicochetSounds = ARC9EFT.RicochetSounds
+SWEP.ShellSounds = ARC9EFT.Shells9mm
