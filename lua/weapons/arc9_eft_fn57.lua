@@ -118,7 +118,7 @@ SWEP.Firemodes = { { Mode = 1 } }
 SWEP.Recoil = 0.1
 SWEP.RecoilCrouchMult = 0.5
 SWEP.VisualRecoilCrouchMult = 0.5
-SWEP.RecoilUp = 0.1
+SWEP.RecoilUp = 0.1 * 0.85 -- patch 0.13.0.4.22617
 SWEP.RecoilSide = 0.015
 SWEP.RecoilRandomUp = 0.06
 SWEP.RecoilRandomSide = 0.01
@@ -139,7 +139,7 @@ SWEP.VisualRecoil = 1.03
 SWEP.VisualRecoilMultSights = 0.9
 SWEP.VisualRecoilHipFire = 1.5
 
-SWEP.VisualRecoilUp = 30 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilUp = 30 * 0.85 -- patch 0.13.0.4.22617
 SWEP.VisualRecoilSide = 88 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 6 -- Roll tilt for visual recoil.
 

@@ -104,7 +104,7 @@ SWEP.Recoil = 0.35
 SWEP.RecoilCrouchMult = 0.5
 SWEP.VisualRecoilCrouchMult = 0.5
 
-SWEP.RecoilUp = 0.1
+SWEP.RecoilUp = 0.1 * 0.85 -- patch 0.13.0.4.22617
 SWEP.RecoilSide = 0.015
 
 SWEP.RecoilRandomUp = 0.06
@@ -131,7 +131,7 @@ SWEP.UseVisualRecoil = true
 SWEP.VisualRecoil = 0.7
 SWEP.VisualRecoilMultSights = 0.5
 
-SWEP.VisualRecoilUp = 21 -- Vertical tilt for visual recoil.
+SWEP.VisualRecoilUp = 21 * 0.85 -- patch 0.13.0.4.22617
 SWEP.VisualRecoilSide = 4 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 33 -- Roll tilt for visual recoil.
 
