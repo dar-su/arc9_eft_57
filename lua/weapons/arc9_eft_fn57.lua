@@ -4,20 +4,25 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_pist")
 
 SWEP.PrintName = "FN Five-seveN MK2"
 
-SWEP.Class = "Pistol"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_pist")
 SWEP.Trivia = {
-    Manufacturer1 = "FN Herstal",
-    Calibre2 = "5.7x28mm FN",
-    Action3 = "Blow",
-    Country4 = "Kingdom of Belgium",
-    Year5 = "2013"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2013"
 }
 
-SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+}
 
 
 SWEP.Description = [[FN Five-Seven, trademarked as the Five-seveN, is a semi-automatic pistol designed and manufactured by FN Herstal in Belgium. The pistol was developed in the early 1990s and features a cold hammer-forged barrel that is chrome-lined for extended service life. The polymer-framed Five-Seven offers single-action operation, low felt recoil, 20-round magazine capacity, and is equipped with an ambidextrous, forward-mounted manual safety, and an accessory rail that accepts tactical lights and lasers.]]

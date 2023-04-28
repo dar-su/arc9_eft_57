@@ -3,17 +3,22 @@ AddCSLuaFile()
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = "Submachine guns"
-SWEP.Credits = { Author1 = "Darsu", Assets2 = "Battlestate Games LTD", General_help3 = "Mal0", ARC9_Base4 = "Arctic" }
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
+SWEP.Credits = { 
+    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
+    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
+    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
+    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
+}
 
 SWEP.PrintName = "FN P90"
-SWEP.Class = "Submachine gun"
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
 SWEP.Trivia = {
-    Manufacturer1 = "FN Herstal",
-    Calibre2 = "5.7x28mm FN",
-    Action3 = "Blow",
-    Country4 = "Kingdom of Belgium",
-    Year5 = "1993"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1993"
 }
 
 SWEP.Description = [[FN P90, also known as the FN Project 1990, is a compact personal defense weapon (PDW) designed and manufactured by FN Herstal in Belgium. Created in response to NATO requests for a replacement for 9x19mm Parabellum firearms, the P90 was designed as a compact but powerful firearm for vehicle crews, operators of crew-served weapons, support personnel, special forces, and counter-terrorist groups.]]
