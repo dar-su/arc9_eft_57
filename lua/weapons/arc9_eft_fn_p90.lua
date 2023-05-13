@@ -704,6 +704,16 @@ function SWEP:HookP_BlockFire()
     end
 end
 
+function SWEP:Hook_RedPrintName()
+    if  !self:GetValue("HasBarrel") or 
+        !self:GetValue("HasStock") or
+        !self:GetValue("HasReceiver") or
+        !self:GetValue("HasAmmoooooooo") or
+        !self:GetValue("HasHandle") then
+            return true 
+    end
+end
+
 SWEP.AttachmentElements = {
     ["eft_p90_stock_std"]    = { Bodygroups = { {1, 1} } },
     ["eft_ps90_stock"]    = { Bodygroups = { {1, 1} }, Skin = 1 },

@@ -743,6 +743,14 @@ function SWEP:HookP_BlockFire()
     end
 end
 
+function SWEP:Hook_RedPrintName()
+    if  !self:GetValue("HasBarrel") or 
+        !self:GetValue("HasAmmoooooooo") or 
+        !self:GetValue("HasSlide") then
+            return true 
+    end
+end
+
 
 SWEP.AttachmentElements = {
     ["eft_57_rec"]    = { Bodygroups = { {1, 1} } },
