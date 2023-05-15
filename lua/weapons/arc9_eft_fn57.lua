@@ -734,7 +734,7 @@ function SWEP:HookP_BlockFire()
         !self:GetValue("HasAmmoooooooo") or 
         !self:GetValue("HasSlide") then
             
-            if self.missingpartsnotifsent < CurTime() then
+            if SERVER and self.missingpartsnotifsent < CurTime() then
                 self.missingpartsnotifsent = CurTime() + 3
                 net.Start("arc9eftmissingparts")
                 net.Send(self:GetOwner())
