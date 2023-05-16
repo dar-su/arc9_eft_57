@@ -220,7 +220,7 @@ SWEP.HoldBreathTime = 40
 SWEP.RestoreBreathTime = 30
 SWEP.BreathInSound = false 
 SWEP.BreathOutSound = false
-SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.wav"
+SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
 
 
 --          Generic stats
@@ -334,22 +334,22 @@ SWEP.BulletBones = {
 
 local path = "weapons/darsu_eft/p90/"
 
-SWEP.ShootSound = { path .. "fire/p90_1.wav", path .. "fire/p90_2.wav" }
-SWEP.ShootSoundIndoor = { path .. "fire/p90_indoor1.wav", path .. "fire/p90_indoor2.wav" }
-SWEP.DistantShootSound = { path .. "fire/p90_distant1.wav", path .. "fire/p90_distant2.wav" }
-SWEP.DistantShootSoundIndoor = { path .. "fire/p90_indoor_distant1.wav", path .. "fire/p90_indoor_distant2.wav" }
+SWEP.ShootSound = { path .. "fire/p90_1.ogg", path .. "fire/p90_2.ogg" }
+SWEP.ShootSoundIndoor = { path .. "fire/p90_indoor1.ogg", path .. "fire/p90_indoor2.ogg" }
+SWEP.DistantShootSound = { path .. "fire/p90_distant1.ogg", path .. "fire/p90_distant2.ogg" }
+SWEP.DistantShootSoundIndoor = { path .. "fire/p90_indoor_distant1.ogg", path .. "fire/p90_indoor_distant2.ogg" }
 
-SWEP.ShootSoundSilenced = { path .. "fire/p90_silenced1.wav", path .. "fire/p90_silenced2.wav" }
-SWEP.ShootSoundSilencedIndoor = { path .. "fire/p90_indoor_silenced1.wav", path .. "fire/p90_indoor_silenced2.wav" }
-SWEP.DistantShootSoundSilenced = { path .. "fire/p90_distant_silenced1.wav", path .. "fire/p90_distant_silenced2.wav" }
-SWEP.DistantShootSoundSilencedIndoor = { path .. "fire/p90_indoor_distant_silenced1.wav", path .. "fire/p90_indoor_distant_silenced2.wav" }
+SWEP.ShootSoundSilenced = { path .. "fire/p90_silenced1.ogg", path .. "fire/p90_silenced2.ogg" }
+SWEP.ShootSoundSilencedIndoor = { path .. "fire/p90_indoor_silenced1.ogg", path .. "fire/p90_indoor_silenced2.ogg" }
+SWEP.DistantShootSoundSilenced = { path .. "fire/p90_distant_silenced1.ogg", path .. "fire/p90_distant_silenced2.ogg" }
+SWEP.DistantShootSoundSilencedIndoor = { path .. "fire/p90_indoor_distant_silenced1.ogg", path .. "fire/p90_indoor_distant_silenced2.ogg" }
 
 SWEP.FiremodeSound = "" -- we will have own in sound tables
 SWEP.ToggleAttSound = "" -- we will have own in sound tables
-SWEP.DryFireSound = path .. "p90_trigger_empty.wav"
+SWEP.DryFireSound = path .. "p90_trigger_empty.ogg"
 
-SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.wav"
-SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.wav"
+SWEP.EnterSightsSound = "arc9_eft_shared/weap_in.ogg"
+SWEP.ExitSightsSound = "arc9_eft_shared/weap_handoff.ogg"
 
 ------------------------- [[[           Hooks & functions            ]]] -------------------------
 
@@ -423,8 +423,8 @@ SWEP.ReloadHideBoneTables = {
     },
 }
 
-local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.wav","arc9_eft_shared/weapon_generic_rifle_spin2.wav","arc9_eft_shared/weapon_generic_rifle_spin3.wav","arc9_eft_shared/weapon_generic_rifle_spin4.wav","arc9_eft_shared/weapon_generic_rifle_spin5.wav","arc9_eft_shared/weapon_generic_rifle_spin6.wav","arc9_eft_shared/weapon_generic_rifle_spin7.wav","arc9_eft_shared/weapon_generic_rifle_spin8.wav","arc9_eft_shared/weapon_generic_rifle_spin9.wav","arc9_eft_shared/weapon_generic_rifle_spin10.wav"}
-local jamm = { "arc9_eft_shared/pistol_jam_slidelock_try1.wav", "arc9_eft_shared/pistol_jam_slidelock_try2.wav", "arc9_eft_shared/pistol_jam_slidelock_try3.wav" }
+local randspin = {"arc9_eft_shared/weapon_generic_rifle_spin1.ogg","arc9_eft_shared/weapon_generic_rifle_spin2.ogg","arc9_eft_shared/weapon_generic_rifle_spin3.ogg","arc9_eft_shared/weapon_generic_rifle_spin4.ogg","arc9_eft_shared/weapon_generic_rifle_spin5.ogg","arc9_eft_shared/weapon_generic_rifle_spin6.ogg","arc9_eft_shared/weapon_generic_rifle_spin7.ogg","arc9_eft_shared/weapon_generic_rifle_spin8.ogg","arc9_eft_shared/weapon_generic_rifle_spin9.ogg","arc9_eft_shared/weapon_generic_rifle_spin10.ogg"}
+local jamm = { "arc9_eft_shared/pistol_jam_slidelock_try1.ogg", "arc9_eft_shared/pistol_jam_slidelock_try2.ogg", "arc9_eft_shared/pistol_jam_slidelock_try3.ogg" }
 
 SWEP.Animations = {
     ["idle"] = {
@@ -436,30 +436,30 @@ SWEP.Animations = {
     ["ready"] = {
         Source = {"ready0", "ready1", "ready2"},
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
-            { s = path .. "p90_bolt_out.wav", t = 16/24 },
-            { s = path .. "p90_bolt_in.wav", t = 20/24 },
+            { s = "arc9_eft_shared/weap_in.ogg", t = 0 },
+            { s = path .. "p90_bolt_out.ogg", t = 16/24 },
+            { s = path .. "p90_bolt_in.ogg", t = 20/24 },
         },
     },
 
     ["draw"] = {
         Source = "draw",
         EventTable = {
-            { s = "arc9_eft_shared/weap_in.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_in.ogg", t = 0 },
         }
     },
 
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            { s = "arc9_eft_shared/weap_out.wav", t = 0 },
+            { s = "arc9_eft_shared/weap_out.ogg", t = 0 },
         }
     },
 
     ["fire"] = {
         Source = "fire",
         EventTable = {
-            { s = path .. "p90_trigger_hammer.wav", t = 0 },
+            { s = path .. "p90_trigger_hammer.ogg", t = 0 },
         }
     },
 
@@ -473,12 +473,12 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             { s = randspin, t = 8/26 },
-            { s = path .. "p90_bolt_out.wav", t = 18/26 },
+            { s = path .. "p90_bolt_out.ogg", t = 18/26 },
             { s = randspin, t = 25/26 },
-            { s = "arc9_eft_shared/weap_round_pullout.wav", t = 35/26 },
-            { s = "arc9_eft_shared/generic_jam_shell_ remove_medium3.wav", t = 50/26  },
+            { s = "arc9_eft_shared/weap_round_pullout.ogg", t = 35/26 },
+            { s = "arc9_eft_shared/generic_jam_shell_ remove_medium3.ogg", t = 50/26  },
             { s = randspin, t = 63/26 },
-            { s = path .. "p90_bolt_in.wav", t = 73/26 },
+            { s = path .. "p90_bolt_in.ogg", t = 73/26 },
             { s = randspin, t = 78/26 },
         }
     },
@@ -489,10 +489,10 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             { s = randspin, t = 6/28 },
-            { s = path .. "p90_mag_out.wav", t = 19/28 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 37/28 },
-            { s = path .. "p90_mag_in_01_slide.wav", t = 56/28 },
-            { s = path .. "p90_mag_in_02_down.wav", t = 63/28 },
+            { s = path .. "p90_mag_out.ogg", t = 19/28 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 37/28 },
+            { s = path .. "p90_mag_in_01_slide.ogg", t = 56/28 },
+            { s = path .. "p90_mag_in_02_down.ogg", t = 63/28 },
             { s = randspin, t = 75/28 },
         }
     },
@@ -502,14 +502,14 @@ SWEP.Animations = {
         FireASAP = true,
         EventTable = {
             { s = randspin, t = 6/28 },
-            { s = path .. "p90_mag_out.wav", t = 14/28 },
-            { s = "arc9_eft_shared/fiveseven_mag_rattle3.wav", t = 23/28 },
-            { s = "arc9_eft_shared/weap_magin_sbrosnik.wav", t = 34/28 },
-            { s = path .. "p90_mag_in_01_slide.wav", t = 48/28 },
-            { s = path .. "p90_mag_in_02_down.wav", t = 54/28 },
+            { s = path .. "p90_mag_out.ogg", t = 14/28 },
+            { s = "arc9_eft_shared/fiveseven_mag_rattle3.ogg", t = 23/28 },
+            { s = "arc9_eft_shared/weap_magin_sbrosnik.ogg", t = 34/28 },
+            { s = path .. "p90_mag_in_01_slide.ogg", t = 48/28 },
+            { s = path .. "p90_mag_in_02_down.ogg", t = 54/28 },
             { s = randspin, t = 65/28 },
-            { s = path .. "p90_bolt_out.wav", t = 75/28 },
-            { s = path .. "p90_bolt_in.wav", t = 81/28 },
+            { s = path .. "p90_bolt_out.ogg", t = 75/28 },
+            { s = path .. "p90_bolt_in.ogg", t = 81/28 },
             { s = randspin, t = 89/28 },
             {hide = 0, t = 0},
             {hide = 1, t = 1.05},
@@ -520,13 +520,13 @@ SWEP.Animations = {
     ["toggle"] = {
         Source = "mod_switch",
         EventTable = {
-            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+            { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 },
         }
     },
     ["switchsights"] = {
         Source = "mod_switch",
         EventTable = {
-            { s = {"arc9_eft_shared/weapon_light_switcher1.wav", "arc9_eft_shared/weapon_light_switcher2.wav", "arc9_eft_shared/weapon_light_switcher3.wav"}, t = 0 },
+            { s = {"arc9_eft_shared/weapon_light_switcher1.ogg", "arc9_eft_shared/weapon_light_switcher2.ogg", "arc9_eft_shared/weapon_light_switcher3.ogg"}, t = 0 },
         }
     },
     
@@ -537,8 +537,8 @@ SWEP.Animations = {
     --     EventTable = {
     --         { s = randspin, t = 8/24 },
     --         { s = jamm, t = 16/24  },
-    --         { s = path .. "p90_bolt_out.wav", t = 28/24 },
-    --         { s = path .. "p90_bolt_in.wav", t = 33/24 },
+    --         { s = path .. "p90_bolt_out.ogg", t = 28/24 },
+    --         { s = path .. "p90_bolt_in.ogg", t = 33/24 },
     --         { s = randspin, t = 42/24 },
     --     }
     -- },
@@ -546,8 +546,8 @@ SWEP.Animations = {
         Source = "jam1", -- misfire
         EventTable = {
             { s = randspin, t = 6/24 },
-            { s = path .. "p90_bolt_out.wav", t = 14/24 },
-            { s = path .. "p90_bolt_in.wav", t = 19/24 },
+            { s = path .. "p90_bolt_out.ogg", t = 14/24 },
+            { s = path .. "p90_bolt_in.ogg", t = 19/24 },
             { s = randspin, t = 29/24 },
         }
     },
@@ -555,20 +555,20 @@ SWEP.Animations = {
         Source = "jam2", -- jam feed
         EventTable = {
             { s = randspin, t = 6/24, ind = 11, bg = 1 },
-            { s = path .. "p90_mag_out.wav", t = 22/24 },
-            { s = "arc9_eft_shared/fiveseven_mag_rattle3.wav", t = 36/24 },
+            { s = path .. "p90_mag_out.ogg", t = 22/24 },
+            { s = "arc9_eft_shared/fiveseven_mag_rattle3.ogg", t = 36/24 },
             { s = randspin, t = 42/24 },
-            { s = path .. "p90_bolt_out.wav", t = 60/24 },            
+            { s = path .. "p90_bolt_out.ogg", t = 60/24 },            
             { s = jamm, t = 65/24 },
-            { s = path .. "p90_bolt_out_slow.wav", t = 80/24 },            
-            { s = "arc9_eft_shared/weap_round_out.wav", t = 83/24 },            
-            { s = path .. "p90_bolt_in.wav", t = 90/24 },
+            { s = path .. "p90_bolt_out_slow.ogg", t = 80/24 },            
+            { s = "arc9_eft_shared/weap_round_out.ogg", t = 83/24 },            
+            { s = path .. "p90_bolt_in.ogg", t = 90/24 },
             { s = randspin, t = 98/24 },
-            { s = path .. "p90_mag_in_01_slide.wav", t = 109/24 },
-            { s = path .. "p90_mag_in_02_down.wav", t = 117/24 },
+            { s = path .. "p90_mag_in_01_slide.ogg", t = 109/24 },
+            { s = path .. "p90_mag_in_02_down.ogg", t = 117/24 },
             { s = randspin, t = 129/24, ind = 11, bg = 0 },
-            { s = path .. "p90_bolt_out.wav", t = 136/24 },            
-            { s = path .. "p90_bolt_in.wav", t = 142/24 },  
+            { s = path .. "p90_bolt_out.ogg", t = 136/24 },            
+            { s = path .. "p90_bolt_in.ogg", t = 142/24 },  
             { s = randspin, t = 148/24 },
         },
         EjectAt = 83/24,
@@ -577,7 +577,7 @@ SWEP.Animations = {
         Source = "jam3", -- jam hard
         EventTable = {
             { s = randspin, t = 6/24 },
-            { s = path .. "p90_bolt_out.wav", t = 18/24 },            
+            { s = path .. "p90_bolt_out.ogg", t = 18/24 },            
             { s = jamm, t = 21/24 },
             { s = jamm, t = 28/24 },
             { s = jamm, t = 38/24 },
@@ -585,8 +585,8 @@ SWEP.Animations = {
             { s = jamm, t = 62/24 },
             { s = jamm, t = 71/24 },
             { s = jamm, t = 85/24 },
-            { s = path .. "p90_bolt_out.wav", t = 87/24 },            
-            { s = path .. "p90_bolt_in.wav", t = 96/24 },  
+            { s = path .. "p90_bolt_out.ogg", t = 87/24 },            
+            { s = path .. "p90_bolt_in.ogg", t = 96/24 },  
             { s = randspin, t = 104/24 },
         }
     },
@@ -594,12 +594,12 @@ SWEP.Animations = {
         Source = "jam4", -- jam soft
         EventTable = {
             { s = randspin, t = 6/24 },
-            { s = path .. "p90_bolt_out.wav", t = 9/24 },            
+            { s = path .. "p90_bolt_out.ogg", t = 9/24 },            
             { s = jamm, t = 18/24 },
             { s = jamm, t = 28/24 },
             { s = jamm, t = 38/24 },
-            { s = path .. "p90_bolt_out.wav", t = 38/24 },            
-            { s = path .. "p90_bolt_in.wav", t = 46/24 },  
+            { s = path .. "p90_bolt_out.ogg", t = 38/24 },            
+            { s = path .. "p90_bolt_in.ogg", t = 46/24 },  
             { s = randspin, t = 51/24 },
         }
     },
@@ -609,10 +609,10 @@ SWEP.Animations = {
             { s = randspin, t = 4/24 },
             { s = randspin, t = 12/24 },
             { s = randspin, t = 22/24 },
-            { s = path .. "p90_bolt_out_slow.wav", t = 27/24 },    
+            { s = path .. "p90_bolt_out_slow.ogg", t = 27/24 },    
             { s = randspin, t = 41/24 },
             { s = randspin, t = 53/24 },
-            { s = path .. "p90_bolt_in_slow.wav", t = 62/24 },  
+            { s = path .. "p90_bolt_in_slow.ogg", t = 62/24 },  
             { s = randspin, t = 70/24 },
             { s = randspin, t = 81/24 },
         },
@@ -637,12 +637,12 @@ SWEP.Animations = {
         MinProgress = 0.95,
         EventTable = {
             { s = randspin, t = 5/24 },
-            { s = path .. "p90_mag_out_check.wav", t = 18/24 },
+            { s = path .. "p90_mag_out_check.ogg", t = 18/24 },
             { s = randspin, t = 30/24 },
-            { s = path .. "p90_bolt_out_slow.wav", t = 41/24 },
-            { s = path .. "p90_bolt_in_slow.wav", t = 52/24 },
+            { s = path .. "p90_bolt_out_slow.ogg", t = 41/24 },
+            { s = path .. "p90_bolt_in_slow.ogg", t = 52/24 },
             { s = randspin, t = 60/24 },
-            { s = path .. "p90_mag_in_01_slide.wav", t = 66/24 },
+            { s = path .. "p90_mag_in_01_slide.ogg", t = 66/24 },
             { s = randspin, t = 82/24 },
         }
     },
@@ -651,8 +651,8 @@ SWEP.Animations = {
         MinProgress = 0.95,
         EventTable = {
             { s = randspin, t = 7/24 },
-            { s = path .. "p90_bolt_out_slow.wav", t = 16/24 },
-            { s = path .. "p90_bolt_in_slow.wav", t = 28/24 },
+            { s = path .. "p90_bolt_out_slow.ogg", t = 16/24 },
+            { s = path .. "p90_bolt_in_slow.ogg", t = 28/24 },
             { s = randspin, t = 37/24 },
         }
     },
@@ -669,7 +669,7 @@ SWEP.Animations = {
         Source = "firemode_0",
         EventTable = {
             { s = randspin, t = 0 },
-            { s = path .. "p90_mag_release_button.wav", t = 10/24 },
+            { s = path .. "p90_mag_release_button.ogg", t = 10/24 },
             { s = randspin, t = 20/24 },
         }
     },
@@ -677,7 +677,7 @@ SWEP.Animations = {
         Source = "firemode_1",
         EventTable = {
             { s = randspin, t = 0 },
-            { s = path .. "p90_trigger_empty.wav", t = 10/24 },
+            { s = path .. "p90_trigger_empty.ogg", t = 10/24 },
             { s = randspin, t = 20/24 },
         }
     },
