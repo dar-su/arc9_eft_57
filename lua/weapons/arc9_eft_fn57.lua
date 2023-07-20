@@ -451,6 +451,12 @@ SWEP.Animations = {
             { s = path .. "fiveseven_slider_in_fast.ogg", t = 16/24 },
             { s = path .. "fiveseven_slider_out_fast.ogg", t = 20/24 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.6, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["draw"] = {
@@ -501,26 +507,50 @@ SWEP.Animations = {
         Source = "reload_single",
         MinProgress = 0.85,
         FireASAP = true,
-        EventTable = rst_single
+        EventTable = rst_single,
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.85, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload_empty_single"] = {
         Source = "reload_single",
         MinProgress = 0.85,
         FireASAP = true,
-        EventTable = rst_single
+        EventTable = rst_single,
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.85, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["reload"] = {
         Source = "reload",
         MinProgress = 0.85,
         FireASAP = true,
-        EventTable = rst_def
+        EventTable = rst_def,
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     ["reload_empty"] = {
         Source = {"reload_empty0", "reload_empty1", "reload_empty2"}, 
         MinProgress = 0.85,
         FireASAP = true,
-        EventTable = rst_empty
+        EventTable = rst_empty,
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.85, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["toggle"] = {
@@ -560,7 +590,13 @@ SWEP.Animations = {
             { s =  path .. "fiveseven_slider_out_fast.ogg", t = 2.1 },
             { s = randspin, t = 2.51 },
         },
-        EjectAt = 1.6
+        EjectAt = 1.6,
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0},
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },        
     
     ["jam3"] = {
@@ -575,6 +611,12 @@ SWEP.Animations = {
             { s = "arc9_eft_shared/weap_round_out.ogg", t = 2.75 },
             { s =  path .. "fiveseven_slider_in_fast.ogg", t = 2.89 },
             { s = randspin, t = 3.24 },
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0},
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
         },
         EjectAt = 2.75
     },      
@@ -595,6 +637,12 @@ SWEP.Animations = {
             { s =  path .. "fiveseven_slider_in_fast.ogg", t = 3.05 },
             { s = randspin, t = 3.42 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0},
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
         EjectAt = 2.59
     },        
     
@@ -610,6 +658,12 @@ SWEP.Animations = {
             { s = randspin, t = 1.55 },
             { s = randspin, t = 1.73 },
         },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0},
+            { t = 0.75, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
         EjectAt = 1.04
     },    
     
@@ -623,7 +677,13 @@ SWEP.Animations = {
             { s =  path .. "fiveseven_slider_in_fast.ogg", t = 0.87 },
             { s = randspin, t = 1.17 },
             { s = randspin, t = 1.37 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.4, lhik = 0 },
+            { t = 0.75, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["inspect"] = { -- TO STUPID ARK NINE SEE WE HAVE INSPECT
@@ -642,7 +702,13 @@ SWEP.Animations = {
             { s = "arc9_eft_shared/weapon_generic_pistol_spin4.ogg", t = 1 },
             { s = randspin, t = 1.5 },
             { s = randspin, t = 2.5 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.2, lhik = 0 },
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["inspect2"] = {
@@ -660,7 +726,13 @@ SWEP.Animations = {
             { s =  path .. "fiveseven_mag_rattle.ogg", t = 60/24 },
             { s =  path .. "fiveseven_mag_in.ogg", t = 73/24 },
             { s = randspin, t = 85/24 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["inspect0"] = {
@@ -673,7 +745,13 @@ SWEP.Animations = {
             { s = randspin, t = 26/24 },
             { s = path .. "fiveseven_slider_in_slow.ogg", t = 35/24 },
             { s = randspin, t = 48/24 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.75, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     
     ["inspect3"] = {
@@ -692,7 +770,13 @@ SWEP.Animations = {
             { s = randspin, t = 3.2 },
             { s =  path .. "fiveseven_slider_in_fast.ogg", t = 3.54 },
             { s = randspin, t = 3.9 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["inspect_empty0"] = {
@@ -704,7 +788,13 @@ SWEP.Animations = {
             { s = "arc9_eft_shared/weapon_generic_pistol_spin4.ogg", t = 1 },
             { s = randspin, t = 1.5 },
             { s = randspin, t = 2.5 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.25, lhik = 0 },
+            { t = 0.75, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
 
     ["inspect_empty2"] = {
@@ -722,7 +812,13 @@ SWEP.Animations = {
             { s =  path .. "fiveseven_mag_rattle.ogg", t = 60/24 },
             { s =  path .. "fiveseven_mag_in.ogg", t = 73/24 },
             { s = randspin, t = 85/24 },
-        }
+        },
+        IKTimeLine = {
+            { t = 0, lhik = 1 },
+            { t = 0.15, lhik = 0 },
+            { t = 0.8, lhik = 0 },
+            { t = 1, lhik = 1 },
+        },
     },
     
 }
