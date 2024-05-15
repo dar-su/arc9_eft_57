@@ -344,6 +344,10 @@ SWEP.BulletBones = {
 
 local path = "weapons/darsu_eft/p90/"
 
+SWEP.ShootPitchVariation = 0
+SWEP.DistantShootVolume = 0.05
+SWEP.DistantShootVolumeActual = 0.05
+
 SWEP.ShootSound = { path .. "fire/p90_1.ogg", path .. "fire/p90_2.ogg" }
 SWEP.ShootSoundIndoor = { path .. "fire/p90_indoor1.ogg", path .. "fire/p90_indoor2.ogg" }
 SWEP.DistantShootSound = { path .. "fire/p90_distant1.ogg", path .. "fire/p90_distant2.ogg" }
