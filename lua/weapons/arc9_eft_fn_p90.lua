@@ -501,6 +501,7 @@ SWEP.Animations = {
         Source = "reload",
         MinProgress = 0.85,
         FireASAP = true,
+        MagSwapTime = 42/28,
         EventTable = {
             { s = randspin, t = 6/28 },
             { s = path .. "p90_mag_out.ogg", t = 19/28 },
@@ -514,6 +515,7 @@ SWEP.Animations = {
         Source = {"reload_empty0", "reload_empty1", "reload_empty2"}, 
         MinProgress = 0.85,
         FireASAP = true,
+        MagSwapTime = 35/28,
         EventTable = {
             { s = randspin, t = 6/28 },
             { s = path .. "p90_mag_out.ogg", t = 14/28 },
@@ -733,6 +735,7 @@ SWEP.AttachmentElements = {
     ["eft_ps90_stock"]    = { Bodygroups = { {1, 1} }, Skin = 1 },
 
     ["eft_p90_mag_std"]    = { Bodygroups = { {2, 1} } },
+    ["eft_p90_mag_opaque"]    = { Bodygroups = { {2, 2}, {10, 1} } },
 
     ["eft_p90_butt_std"]    = { Bodygroups = { {4, 1} } },
     ["eft_p90_butt_di"]    = { Bodygroups = { {4, 2} } },
@@ -866,3 +869,11 @@ SWEP.AimDownSightsTimeMultShooting = 4
 
 SWEP.RicochetSounds = ARC9EFT.RicochetSounds
 SWEP.ShellSounds = ARC9EFT.Shells9mm
+
+
+SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
+    local loadedronds = swep:GetLoadedRounds()
+    if loadedronds <= 10 then loadedronds = loadedronds * 0.8 end
+    if loadedronds <= 4 then loadedronds = loadedronds -2 end
+    ent:SetPoseParameter("magspring", 1-math.Clamp(loadedronds/50, 0, 1))
+end

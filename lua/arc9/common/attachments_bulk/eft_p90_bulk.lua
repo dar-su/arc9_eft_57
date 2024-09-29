@@ -260,8 +260,146 @@ ATT.SuppressEmptySuffix = false
 
 ATT.Category = {"eft_p90_mag"}
 
+ATT.BulletBones = {
+    [1] = "patron_in_weapon",
+    [2] = "patron_in_mag1",
+    [3] = "patron_in_mag2",
+    [4] = "patron_in_mag3",
+    [5] = "patron_in_mag4",
+    [6] = "patron_in_mag5",
+    [7] = "patron_in_mag6",
+    [8] = "patron_in_mag7",
+    [9] = "patron_in_mag8",
+    [10] = "patron_in_mag9",
+    [11] = "patron_in_mag10",
+    [12] = "patron_in_mag11",
+    [13] = "patron_in_mag12",
+    [14] = "patron_in_mag13",
+    [15] = "patron_in_mag14",
+    [16] = "patron_in_mag15",
+    [17] = "patron_in_mag16",
+    [18] = "patron_in_mag17",
+    [19] = "patron_in_mag18",
+    [20] = "patron_in_mag19",
+    [21] = "patron_in_mag20",
+    [22] = "patron_in_mag21",
+    [23] = "patron_in_mag22",
+    [24] = "patron_in_mag23",
+    [25] = "patron_in_mag24",
+    [26] = "patron_in_mag25",
+    [27] = "patron_in_mag26",
+    [28] = "patron_in_mag27",
+    [29] = "patron_in_mag28",
+    [30] = "patron_in_mag29",
+    [31] = "patron_in_mag30",
+    [32] = "patron_in_mag31",
+    [33] = "patron_in_mag32",
+    [34] = "patron_in_mag33",
+    [35] = "patron_in_mag34",
+    [36] = "patron_in_mag35",
+    [37] = "patron_in_mag36",
+    [38] = "patron_in_mag37",
+    [39] = "patron_in_mag38",
+    [40] = "patron_in_mag39",
+    [41] = "patron_in_mag40",
+    [42] = "patron_in_mag41",
+    [43] = "patron_in_mag42",
+    [44] = "patron_in_mag43",
+    [45] = "patron_in_mag44",
+    [46] = "patron_in_mag45",
+    [47] = "patron_in_mag46",
+    [48] = "patron_in_mag47",
+    [49] = "patron_in_mag48",
+    [50] = "patron_in_mag49",
+    [51] = "patron_in_mag50",
+}
+
+ATT.ReloadHideBoneTables = {
+    [1] = {
+        "mod_magazine",
+        "patron_in_mag1",
+        "patron_in_mag2",
+        "patron_in_mag3",
+        "patron_in_mag4",
+        "patron_in_mag5",
+        "patron_in_mag6",
+        "patron_in_mag7",
+        "patron_in_mag8",
+        "patron_in_mag9",
+        "patron_in_mag10",
+        "patron_in_mag11",
+        "patron_in_mag12",
+        "patron_in_mag13",
+        "patron_in_mag14",
+        "patron_in_mag15",
+        "patron_in_mag16",
+        "patron_in_mag17",
+        "patron_in_mag18",
+        "patron_in_mag19",
+        "patron_in_mag20",
+        "patron_in_mag21",
+        "patron_in_mag22",
+        "patron_in_mag23",
+        "patron_in_mag24",
+        "patron_in_mag25",
+        "patron_in_mag26",
+        "patron_in_mag27",
+        "patron_in_mag28",
+        "patron_in_mag29",
+        "patron_in_mag30",
+        "patron_in_mag31",
+        "patron_in_mag32",
+        "patron_in_mag33",
+        "patron_in_mag34",
+        "patron_in_mag35",
+        "patron_in_mag36",
+        "patron_in_mag37",
+        "patron_in_mag38",
+        "patron_in_mag39",
+        "patron_in_mag40",
+        "patron_in_mag41",
+        "patron_in_mag42",
+        "patron_in_mag43",
+        "patron_in_mag44",
+        "patron_in_mag45",
+        "patron_in_mag46",
+        "patron_in_mag47",
+        "patron_in_mag48",
+        "patron_in_mag49",
+        "patron_in_mag50",
+    },
+}
+
 
 ARC9.LoadAttachment(ATT, "eft_p90_mag_std")
+
+///////////////////////////////////////      eft_p90_mag_opaque
+
+
+ATT = {}
+
+ATT.PrintName = "FN P90 5.7x28 50-round magazine (Non trasparent)"
+ATT.CompactName = "P90 orig."
+ATT.Icon = Material("entities/eft_p90_attachments/mag.png", "mips smooth")
+ATT.Description = [[A 50-round polymer magazine for the 5.7x28mm FN P90 SMG.
+
+original nontransparent version like in tarkov]]
+
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC9 - EFT Attachments"
+
+ATT.EFTErgoAdd = -5
+ATT.CustomCons = { Ergonomics = "-5" }
+
+ATT.ChamberSize = 1
+ATT.ClipSize = 50
+ATT.DropMagazineAmount = 1
+ATT.SuppressEmptySuffix = false 
+
+ATT.Category = {"eft_p90_mag"}
+
+
+ARC9.LoadAttachment(ATT, "eft_p90_mag_opaque")
 
 
 ///////////////////////////////////////      eft_p90_muzzle_std
