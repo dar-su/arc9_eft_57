@@ -33,7 +33,7 @@ SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_p90.mdl"
 SWEP.ViewModelFOVBase = 62
 SWEP.MirrorVMWM = true
-SWEP.DefaultBodygroups = "00000000000100"
+SWEP.DefaultBodygroups = "00000000000000000"
 SWEP.BarrelLength = 35
 -- SWEP.RecoilMultHipFire = 1.1
 -- SWEP.RecoilAutoControlMultHipFire = 0.5
@@ -734,8 +734,8 @@ SWEP.AttachmentElements = {
     ["eft_p90_stock_std"]    = { Bodygroups = { {1, 1} } },
     ["eft_ps90_stock"]    = { Bodygroups = { {1, 1} }, Skin = 1 },
 
-    ["eft_p90_mag_std"]    = { Bodygroups = { {2, 1} } },
-    ["eft_p90_mag_opaque"]    = { Bodygroups = { {2, 2}, {10, 1} } },
+    ["eft_p90_mag_std"]    = { Bodygroups = { {2, 1}, {10, 1} }},
+    ["eft_p90_mag_opaque"]    = { Bodygroups = { {2, 2}, {10, 0} } },
 
     ["eft_p90_butt_std"]    = { Bodygroups = { {4, 1} } },
     ["eft_p90_butt_di"]    = { Bodygroups = { {4, 2} } },
@@ -872,7 +872,7 @@ SWEP.ShellSounds = ARC9EFT.Shells9mm
 
 
 SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
-    local loadedronds = swep:GetLoadedRounds()
+    local loadedronds = swep:GetLoadedRounds() - 1
     if loadedronds <= 10 then loadedronds = loadedronds * 0.8 end
     if loadedronds <= 4 then loadedronds = loadedronds -2 end
     ent:SetPoseParameter("magspring", 1-math.Clamp(loadedronds/50, 0, 1))
