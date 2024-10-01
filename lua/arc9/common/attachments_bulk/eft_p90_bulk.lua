@@ -317,6 +317,8 @@ ATT.BulletBones = {
 ATT.ReloadHideBoneTables = {
     [1] = {
         "mod_magazine",
+        "magspring_start",
+        "magspring_end",
         "patron_in_mag1",
         "patron_in_mag2",
         "patron_in_mag3",
