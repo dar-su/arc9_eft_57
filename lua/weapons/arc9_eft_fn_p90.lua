@@ -378,7 +378,7 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     -- local rand = math.Truncate(util.SharedRandom("hi", 0, 2.99)) -- FUCK random
 
     
-    local nomag = !elements["eft_p90_mag_std"]
+    local nomag = !elements["p90_50rnd"]
     -- local empty = swep:Clip1() == 0
 
     -- 0 looking

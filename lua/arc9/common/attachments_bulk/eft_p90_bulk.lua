@@ -259,6 +259,7 @@ ATT.DropMagazineAmount = 1
 ATT.SuppressEmptySuffix = false 
 
 ATT.Category = {"eft_p90_mag"}
+ATT.ActivateElements = {"p90_50rnd"}
 
 ATT.BulletBones = {
     [1] = "patron_in_weapon",
@@ -399,6 +400,7 @@ ATT.DropMagazineAmount = 1
 ATT.SuppressEmptySuffix = false 
 
 ATT.Category = {"eft_p90_mag"}
+ATT.ActivateElements = {"p90_50rnd"}
 
 
 ARC9.LoadAttachment(ATT, "eft_p90_mag_opaque")
