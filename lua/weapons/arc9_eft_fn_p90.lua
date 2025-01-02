@@ -1,49 +1,111 @@
 AddCSLuaFile()
-
-SWEP.Base = "arc9_base"
-SWEP.Spawnable = true
+SWEP.Base = "arc9_eft_base"
 SWEP.Category = "ARC9 - Escape From Tarkov"
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
-SWEP.Credits = { 
-    [ARC9:GetPhrase("eft_trivia_author") .. "1"] = "Darsu", 
-    [ARC9:GetPhrase("eft_trivia_assets") .. "2"] = "Battlestate Games LTD", 
-    [ARC9:GetPhrase("eft_trivia_help") .. "3"] = "Mal0", 
-    [ARC9:GetPhrase("eft_trivia_arc9") .. "4"] = "Arctic",
-}
+SWEP.Spawnable = true
+
+------------------------- |||           Trivia            ||| -------------------------
 
 SWEP.PrintName = "FN P90"
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
-SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1993"
-}
-
 SWEP.Description = [[FN P90, also known as the FN Project 1990, is a compact personal defense weapon (PDW) designed and manufactured by FN Herstal in Belgium. Created in response to NATO requests for a replacement for 9x19mm Parabellum firearms, the P90 was designed as a compact but powerful firearm for vehicle crews, operators of crew-served weapons, support personnel, special forces, and counter-terrorist groups.]]
+
+SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
+SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
+
+SWEP.Trivia = {
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tsniitochmash"),
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "9x39mm",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1987"
+}
 
 SWEP.StandardPresets = {
     "[SBR]XQAAAQDkAQAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVisPPGQ68+wxl6Clg2WdPpXisRhzTpf/iEt6Gg8zuohxxwnRMcCgIqexBZtQsepi2XBaxJ5hSzYt41kzK/9Z19V4tqcMdFINtbCRO1nykUf5Ffy9TI/cd2zCORP380hDAg6kqXhO5yfsw41mXPQIovzxjy0psESphcE5q25r9NzIQI/ycLJ2CA==",
     "[CWDG]XQAAAQAuAgAAAAAAAAA9iIIiM7tupQCpjtoZF0tx3T1+wANbEVxqFZAByh6qhVZXVig8lqP9ajIpFq4QtXCdQZcMPH9a0d3jQpT2KU/HcIpbeMTNN/KEGHEWyi8E3qd5DFIi/R9mheHTmu1ixKNh8CnP8jDbIqx+0HBSdQlXRHA9mCCgX8a62i9XJX5d9PgmhsxMPoi+yElM5Bth9cdixYGlVfIKHaU5AGXkqK6F7P8HN7nd7DFzk7zEccKjeamv50x2PPQka9FtHzujI5y/CUs0AE45uEwAYA=="
 }
 
-SWEP.Slot = 2
-SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
 SWEP.ViewModel = "models/weapons/arc9/darsu_eft/c_p90.mdl"
-SWEP.ViewModelFOVBase = 62
-SWEP.MirrorVMWM = true
-SWEP.DefaultBodygroups = "00000000000000000"
+SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
+
+------------------------- |||           Offsets            ||| -------------------------
+
+SWEP.WorldModelOffset = {
+    Pos = Vector(-6.5, 5.5, -6),
+    Ang = Angle(-7, 0, 180),
+    TPIKPos = Vector(-6, 4.5, -1), -- rpg
+    TPIKAng = Angle(-5, 0, 180),
+    Scale = 1
+}
+
+SWEP.IronSights = {
+    Pos = Vector(-3.6, -7, 1.22),
+    Ang = Angle(0, 0.09, 0),
+    Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
+    Magnification = 1.1,
+}
+
+SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
+SWEP.SprintAng = Angle(50, 10, -45)
+SWEP.SprintPos = Vector(4, -5, 0)
+SWEP.CustomizePos = Vector(11, 30, 4)
+SWEP.CustomizeSnapshotFOV = 80
+SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23) 
+
+------------------------- |||           Stats            ||| -------------------------
+
+SWEP.Spread = 8.594 * ARC9.MOAToAcc
+SWEP.RPM = 900
+SWEP.EFTErgo = 60
 SWEP.BarrelLength = 35
--- SWEP.RecoilMultHipFire = 1.1
--- SWEP.RecoilAutoControlMultHipFire = 0.5
+SWEP.Ammo = "pistol"
+SWEP.Firemodes = {
+    { Mode = -1, PoseParam = 1},
+    { Mode = 1, PoseParam = 2 }
+}
 
+SWEP.Slot = 2
 
-------------------------- [[[           STATS            ]]] -------------------------
+------------------------- |||           Recoil            ||| -------------------------
 
---          Damage
+SWEP.Recoil = 0.5 -- general multiplier of main recoil
 
-SWEP.DamageRand = 0.005
+SWEP.RecoilUp   = 2   -- up recoil
+SWEP.RecoilSide = 0.5 -- sideways recoil
+SWEP.RecoilRandomUp   = 0.3 -- random up/down
+SWEP.RecoilRandomSide = 0.5   -- random left/right
+
+SWEP.RecoilAutoControl = 3.2 -- autocompenstaion, could be cool if set to high but it also affects main recoil
+
+-- visual recoil   aka visrec
+SWEP.VisualRecoil = 1 -- general multiplier for it
+
+SWEP.EFT_VisualRecoilUp_BURST_SEMI   = 0.15   -- up/down tilt when semi/bursts
+SWEP.VisualRecoilUp                   = 0.6   --   when fullautoing
+SWEP.EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
+SWEP.VisualRecoilSide                 = 0.16   --   when fullautoing
+SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
+
+SWEP.VisualRecoilPunch = 1 -- How far back visrec moves the gun
+SWEP.VisualRecoilPunchSights = 7 -- same but in sights only
+
+SWEP.VisualRecoilDampingConst = 200  -- spring settings, this is speed of visrec
+SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
+SWEP.VisualRecoilSpringMagnitude = 0.5 -- some third element of spring, high values make gun shake asf on low fps
+
+SWEP.VisualRecoilPositionBumpUpHipFire = 0.1 -- gun will go down each shot by this value
+SWEP.VisualRecoilPositionBumpUp = -0.05 -- same but in sights
+SWEP.VisualRecoilPositionBumpUpRTScope = 0.05 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
+
+SWEP.EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
+
+SWEP.RecoilKick = 0.9 -- camera roll each shot + makes camera go more up when fullautoing
+
+SWEP.VisualRecoilCenter = Vector(4.28, 19, -3)
+SWEP.SubtleVisualRecoil = 0.75
+SWEP.SubtleVisualRecoilDirection = 2.75
+SWEP.SubtleVisualRecoilSpeed = 1
+
+------------------------- |||           Damage            ||| -------------------------
 
 -- default ss190
 
@@ -93,260 +155,31 @@ SWEP.DamageLookupTable = {
     {   1000 /0.0254, 
     31.86/2    },
 }
---
 
---          Spread
+------------------------- |||           Malfunctions            ||| -------------------------
 
-SWEP.Spread = 8.594 * ARC9.MOAToAcc
-SWEP.SpreadAddHipFire = 0.02
-SWEP.SpreadMultMove = 1.5
-SWEP.SpreadAddMove = 0.015
-
-
---          Recoil
--- touch these
-
-SWEP.Recoil = 0.5 -- general multiplier of main recoil
-
-SWEP.RecoilUp   = 2   -- up recoil
-SWEP.RecoilSide = 0.5 -- sideways recoil
-SWEP.RecoilRandomUp   = 0.3 -- random up/down
-SWEP.RecoilRandomSide = 0.5   -- random left/right
-
-SWEP.RecoilAutoControl = 3.2 -- autocompenstaion, could be cool if set to high but it also affects main recoil
-
--- visual recoil   aka visrec
-SWEP.VisualRecoil = 1 -- general multiplier for it
-
-local EFT_VisualRecoilUp_BURST_SEMI   = 0.15   -- up/down tilt when semi/bursts
-SWEP.VisualRecoilUp                   = 0.6   --   when fullautoing
-local EFT_VisualRecoilSide_BURST_SEMI = 0.001 -- left/right tilt when semi/burst
-SWEP.VisualRecoilSide                 = 0.16   --   when fullautoing
-SWEP.VisualRecoilRoll = 4 -- roll tilt, a visual thing
-
-SWEP.VisualRecoilPunch = 1 -- How far back visrec moves the gun
-SWEP.VisualRecoilPunchSights = 7 -- same but in sights only
-
-SWEP.VisualRecoilDampingConst = 200  -- spring settings, this is speed of visrec
-SWEP.VisualRecoilSpringPunchDamping = 5 -- the less this is the more wobbly gun moves
-SWEP.VisualRecoilSpringMagnitude = 0.5 -- some third element of spring, high values make gun shake asf on low fps
-
-SWEP.VisualRecoilPositionBumpUpHipFire = 0.1 -- gun will go down each shot by this value
-SWEP.VisualRecoilPositionBumpUp = -0.05 -- same but in sights
-SWEP.VisualRecoilPositionBumpUpRTScope = 0.05 -- same but in rt scopes, you probably should keep it same as sight value, i guess it doesn't matter anymore after recoil update
-
-SWEP.VisualRecoilCenter = Vector(2, 14, 0) -- ugh, i dont now what to set it too, but probably it should be diffferent on each gun
-local EFT_ShotsToSwitchToFullAutoBehaviur = 3 -- how many shots for switch to fullauto stats from semi/burst, + 2 shots afterwards are lerping. you probably should not touch this but ok
-
-SWEP.RecoilKick = 0.9 -- camera roll each shot + makes camera go more up when fullautoing
-
--- dont touch this i guess
-
-SWEP.RecoilMultHipFire = 1
-SWEP.RecoilMultCrouch = 0.75
-SWEP.RecoilUpMultFirstShot = 0.85
-SWEP.RecoilUpMultRecoil = 1.2
-
-SWEP.RecoilDissipationRate = 5
-SWEP.RecoilAutoControlMultHipFire = 0.75
-SWEP.RecoilAutoControl_DontTryToReturnBack = true
-SWEP.RecoilResetTime = 0.03
-SWEP.RecoilFullResetTime = 0.2
-
-SWEP.UseVisualRecoil = true 
-SWEP.VisualRecoilMultHipFire = 1
-SWEP.VisualRecoilMultSights = 1
-SWEP.VisualRecoilMultCrouch = 0.75
-
-SWEP.VisualRecoilDampingConstMultFirstShot = 3
-
--- SWEP.VisualRecoilThinkFunc = function(springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING, recamount)
---     return springconstant, VisualRecoilSpringMagnitude, PUNCH_DAMPING
--- end
-
-SWEP.VisualRecoilDoingFunc = function(up, side, roll, punch, recamount, self)
-    local fullauto = math.Clamp(recamount - EFT_ShotsToSwitchToFullAutoBehaviur, 0, 3) * 0.33333333
-    up = Lerp(fullauto, EFT_VisualRecoilUp_BURST_SEMI, up)
-    side = Lerp(fullauto, EFT_VisualRecoilSide_BURST_SEMI, side)
-
-    if recamount < 2 then
-        if self:GetSightAmount() < 0.2 then up = 1 end -- only for visual when hipfiring
-    end
-
-    return up, side, roll, punch
-end
-
-SWEP.RecoilKickAffectPitch = true
-SWEP.RecoilKickDamping = 10
-
-
---          Heating
-
-SWEP.Malfunction = true 
-SWEP.MalfunctionNeverLastShoot = true 
 SWEP.MalfunctionMeanShotsToFail = 300*2
 SWEP.MalfunctionMeanShotsToFailMultHot = -0.1*2
-SWEP.Overheat = true
 SWEP.HeatCapacity = 220
 SWEP.HeatDissipation = 4
-SWEP.HeatPerShot = 1
-SWEP.HeatLockout = false
 
+------------------------- |||           Minor stuff            ||| -------------------------
 
---          Firemodes
-
-SWEP.RPM = 870
--- SWEP.Firemodes = { { Mode = -1 }, { Mode = 1 } } -- auto, semi
-SWEP.Firemodes = {
-    { Mode = -1, PoseParam = 1},
-    { Mode = 1, PoseParam = 2 }
-}
-
---          Speed
-
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.35 -- How long it takes to go from sprinting to being able to fire.
-
-SWEP.SpeedMult = 0.95
-SWEP.SpeedMultSights = 0.75
-SWEP.SpeedMultShooting = 0.7
-SWEP.SpeedMultMelee = 0.75
-SWEP.SpeedMultCrouch = 1
-SWEP.SpeedMultBlindFire = 1
-
-
---          Other
-
-SWEP.FreeAimRadius = 2
-SWEP.FreeAimRadiusSights = 0
-
-SWEP.Sway = 1
-SWEP.SwayMove = 0.5
-SWEP.SwayMidAir = 10
-SWEP.SwayMultCrouch = 0.75
-SWEP.SwayMultHipFire = 0.2
-SWEP.SwayMultSights = 0.25
-SWEP.HoldBreathTime = 40
-SWEP.RestoreBreathTime = 30
-SWEP.BreathInSound = false 
-SWEP.BreathOutSound = false
-SWEP.BreathRunOutSound = "arc9_eft_shared/bear3_breath_sprint.ogg"
-
-
---          Generic stats
-
-SWEP.Ammo = "pistol"
-SWEP.ChamberSize = 0 -- no mag
-SWEP.ClipSize = 1 -- actual chamber (no mag)
-SWEP.SupplyLimit = 4
-SWEP.SecondarySupplyLimit = 4
-SWEP.ReloadInSights = true
-SWEP.SuppressEmptySuffix = true
-SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/p90mag.mdl"
-SWEP.DropMagazineSounds = { }
-SWEP.DropMagazineAmount = 0
-SWEP.DropMagazineTime = 1.05
-SWEP.DropMagazineQCA = 4
-SWEP.DropMagazinePos = Vector(0, 0, 0)
-SWEP.DropMagazineAng = Angle(90, 180, 90)
-SWEP.DropMagazineVelocity = Vector(-30, -50, 0)
-SWEP.Bash = false
-SWEP.PrimaryBash = false
-SWEP.TracerNum = 0
-SWEP.TracerColor = Color(255, 225, 200)
-
-
-
-------------------------- [[[           Other            ]]] -------------------------
-
---          Positions and offsets
-
-SWEP.IronSights = {
-    Pos = Vector(-3.6, -7, 1.22),
-    Ang = Angle(0, 0.09, 0),
-    Midpoint = { Pos = Vector(-1, 0, 8), Ang = Angle(0, 0, -145) },
-    Magnification = 1.1,
-}
-
-SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
-SWEP.ActiveAng = Angle(0, 0, 0)
-
-SWEP.SprintAng = Angle(50, 10, -45)
-SWEP.SprintPos = Vector(4, -5, 0)
-
-SWEP.CrouchPos = Vector(-0.5, -2.0, -.45)
-SWEP.CrouchAng = Angle(0, 0, -1)
-
-SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(11, 30, 4)
-SWEP.CustomizeSnapshotFOV = 80
-SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23) 
-
-
---          Third person stuff
-
-SWEP.HoldType = "rpg"
-SWEP.HoldTypeSprint = "rpg"
-SWEP.HoldTypeHolstered = "rpg"
-SWEP.HoldTypeSights = "rpg"
-SWEP.HoldTypeCustomize = "slam"
-
-SWEP.WorldModelOffset = {
-    Pos = Vector(-6.5, 5.5, -6),
-    Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-6, 4.5, -1), -- rpg
-    TPIKAng = Angle(-5, 0, 180),
-    Scale = 1
-}
-
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
-SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-
-
---          Effects
-
-SWEP.CamQCA = 3
-SWEP.CamOffsetAng = Angle(0, 0, 90)
 SWEP.CamQCA_Mult = 0.4
-SWEP.CamQCA_Mult_ADS = 0.05
-
 SWEP.MuzzleParticle = "muzzleflash_smg_bizon"
-
-
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/57x28.mdl"
-SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 1
-SWEP.CaseEffectQCA = 2
-SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
+SWEP.ShellSounds = ARC9EFT.Shells9mm
 
-SWEP.BulletBones = {
-    [1] = "patron_in_weapon",
-}
+SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
+    local loadedronds = swep:GetLoadedRounds() - 1
+    if loadedronds <= 10 then loadedronds = loadedronds * 0.8 end
+    if loadedronds <= 4 then loadedronds = loadedronds -2 end
+    ent:SetPoseParameter("magspring", 1 - math.Clamp(loadedronds / 50, 0, 1))
+end
 
--- SWEP.HideBones = { -- please do it later
---     "vm_mag2",
---     "tag_mag2"
--- }
-
--- SWEP.ReloadHideBoneTables = {
---     [1] = {
---         "vm_mag",
---         "tag_mag"
---     },
---     [2] = {
---         "vm_mag2",
---         "tag_mag2"
---     }
--- }
-
-------------------------- [[[           Sounds            ]]] -------------------------
+------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/p90/"
-
-SWEP.ShootPitchVariation = 0
-SWEP.DistantShootVolume = 0.05
-SWEP.DistantShootVolumeActual = 0.05
 
 SWEP.ShootSound = { path .. "fire/p90_1.ogg", path .. "fire/p90_2.ogg" }
 SWEP.ShootSoundIndoor = { path .. "fire/p90_indoor1.ogg", path .. "fire/p90_indoor2.ogg" }
@@ -358,17 +191,26 @@ SWEP.ShootSoundSilencedIndoor = { path .. "fire/p90_indoor_silenced1.ogg", path 
 SWEP.DistantShootSoundSilenced = { path .. "fire/p90_distant_silenced1.ogg", path .. "fire/p90_distant_silenced2.ogg" }
 SWEP.DistantShootSoundSilencedIndoor = { path .. "fire/p90_indoor_distant_silenced1.ogg", path .. "fire/p90_indoor_distant_silenced2.ogg" }
 
-SWEP.FiremodeSound = "" -- we will have own in sound tables
-SWEP.ToggleAttSound = "" -- we will have own in sound tables
 SWEP.DryFireSound = path .. "p90_trigger_empty.ogg"
 
 SWEP.EnterSightsSound = ARC9EFT.ADSSMG
 SWEP.ExitSightsSound = ARC9EFT.ADSSMG
 
-------------------------- [[[           Hooks & functions            ]]] -------------------------
+------------------------- |||           Dropped magazines            ||| -------------------------
 
+SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/p90mag.mdl"
+SWEP.DropMagazineAmount = 0
+SWEP.DropMagazineTime = 1.05
+SWEP.DropMagazineQCA = 4
+SWEP.DropMagazinePos = Vector(0, 0, 0)
+SWEP.DropMagazineAng = Angle(90, 180, 90)
+SWEP.DropMagazineVelocity = Vector(-30, -50, 0)
 
-------------------------- [[[           Animations            ]]] -------------------------
+------------------------- |||           Animations            ||| -------------------------
+
+SWEP.BulletBones = {
+    [1] = "patron_in_weapon",
+}
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
     local elements = swep:GetElements()
@@ -700,35 +542,10 @@ SWEP.Animations = {
     
 }
 
-------------------------- [[[           Attachments            ]]] -------------------------
 
-SWEP.missingpartsnotifsent = 0
+------------------------- |||           Attachments            ||| -------------------------
 
-function SWEP:HookP_BlockFire()
-    if  !self:GetValue("HasBarrel") or 
-        !self:GetValue("HasStock") or
-        !self:GetValue("HasReceiver") or
-        !self:GetValue("HasAmmoooooooo") or
-        !self:GetValue("HasHandle") then
-            
-            if SERVER and self.missingpartsnotifsent < CurTime() then
-                self.missingpartsnotifsent = CurTime() + 3
-                net.Start("arc9eftmissingparts")
-                net.Send(self:GetOwner())
-            end
-            return true 
-    end
-end
-
-function SWEP:Hook_RedPrintName()
-    if  !self:GetValue("HasBarrel") or 
-        !self:GetValue("HasStock") or
-        !self:GetValue("HasReceiver") or
-        !self:GetValue("HasAmmoooooooo") or
-        !self:GetValue("HasHandle") then
-            return true 
-    end
-end
+SWEP.EFTRequiredAtts = { "HasBarrel", "HasStock", "HasReceiver", "HasHandle", "HasAmmoooooooo" }
 
 SWEP.AttachmentElements = {
     ["eft_p90_stock_std"]    = { Bodygroups = { {1, 1} } },
@@ -855,25 +672,3 @@ SWEP.Attachments = {
         -- CosmeticOnly = true,
     },
 }
-
-SWEP.EFTErgo = 60
-if ARC9EFTBASE then
-    SWEP.AimDownSightsTimeHook = ARC9EFT.ErgoHook or nil
-    SWEP.HoldBreathTimeHook = ARC9EFT.ErgoBreathHook or nil
-    -- SWEP.HookP_TranslateSound = ARC9EFT.ErgoAdsVolume or nil
-    SWEP.SpreadHook = ARC9EFT.SpreadBonus or nil
-else
-    print("Dum! install arc9 eft shared!!!!!!!!!!!!!!")
-end
-SWEP.AimDownSightsTimeMultShooting = 4
-
-SWEP.RicochetSounds = ARC9EFT.RicochetSounds
-SWEP.ShellSounds = ARC9EFT.Shells9mm
-
-
-SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
-    local loadedronds = swep:GetLoadedRounds() - 1
-    if loadedronds <= 10 then loadedronds = loadedronds * 0.8 end
-    if loadedronds <= 4 then loadedronds = loadedronds -2 end
-    ent:SetPoseParameter("magspring", 1-math.Clamp(loadedronds/50, 0, 1))
-end

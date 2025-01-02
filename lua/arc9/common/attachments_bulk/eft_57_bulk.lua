@@ -215,12 +215,6 @@ ATT.Silenced = true
 ATT.CustomizeSnapshotFOVAdd = 22
 ATT.BarrelLengthAdd = 5
 
-local path = "weapons/darsu_eft/57/"
-ATT.ShootSound = path .. "fiveseven_fire_silenced_close.ogg"
-ATT.DistantShootSound = path .. "fiveseven_fire_silenced_distant.ogg"
-ATT.ShootSoundIndoor = path .. "fiveseven_fire_silenced_indoor_close.ogg"
-ATT.DistantShootSoundIndoor = path .. "fiveseven_fire_silenced_indoor_distant.ogg"
-
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.MuzzleEffectQCA = 5
 ATT.NoFlash = true
