@@ -32,7 +32,7 @@ SWEP.WorldModel = "models/weapons/w_pist_fiveseven.mdl"
 SWEP.WorldModelOffset = {
     Pos = Vector(-16.25, 5.5, -4),
     Ang = Angle(-7, 0, 180),
-    TPIKPos = Vector(-2.5, 6, -5), -- rpg
+    TPIKPos = Vector(-6.5, 6, -5), -- rpg
     TPIKAng = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -45,8 +45,8 @@ SWEP.IronSights = {
 }
 
 SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
-SWEP.SprintAng = Angle(0, 20.6,  -15.2)
-SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
+-- SWEP.SprintAng = Angle(0, 20.6,  -15.2)
+-- SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
 SWEP.CustomizePos = Vector(21.7, 25, 3.5)
 SWEP.CustomizeSnapshotFOV = 70
 SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23)
@@ -60,6 +60,12 @@ if GetConVar("arc9_eft_nontpik_mode"):GetBool() then -- pistols
     SWEP.HoldTypeSights = "revolver"
     SWEP.HoldTypeCustomize = "passive"
 end
+
+-- this thing WILL one hand sprint always
+SWEP.OneHandedSprint = true
+SWEP.SprintAng = Angle(3, 33, -12)
+SWEP.SprintPos = Vector(3, -7.1, -9)
+SWEP.HoldTypeSprint = "normal"
 
 ------------------------- |||           Stats            ||| -------------------------
 
