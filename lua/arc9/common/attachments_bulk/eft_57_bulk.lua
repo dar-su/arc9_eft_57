@@ -113,6 +113,8 @@ ATT.CustomCons = { Ergonomics = "-1" }
 
 ATT.Category = {"eft_57_mag"}
 
+ATT.ActivateElements = {"magdefault"}
+
 
 ARC9.LoadAttachment(ATT, "eft_57_mag")
 
