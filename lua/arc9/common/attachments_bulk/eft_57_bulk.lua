@@ -213,7 +213,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.015
 ATT.EFTErgoAdd = -15
 ATT.CustomCons = { Ergonomics = "-15" }
 
-ATT.Silenced = true
+ATT.Silencer = true
 ATT.CustomizeSnapshotFOVAdd = 22
 ATT.BarrelLengthAdd = 5
 
