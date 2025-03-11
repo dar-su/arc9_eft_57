@@ -3,7 +3,7 @@
 
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/darsu_eft/p90/mag_p90_fn_p90_std_57x28_50_LOD0_diff2"
+	"$basetexture" "models/weapons/arc9/darsu_eft/p90/mag_p90_fn_p90_std_57x28_50_LOD0_diff"
 	"$bumpmap" "models/weapons/arc9/darsu_eft/p90/mag_p90_fn_p90_std_57x28_50_LOD0_nrm"
 	"$phongexponenttexture" "models/weapons/arc9/darsu_eft/p90/mag_p90_fn_p90_std_57x28_50_LOD0_gloss"
 	"$phong"		"1"

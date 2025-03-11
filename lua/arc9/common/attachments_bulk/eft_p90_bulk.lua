@@ -257,6 +257,8 @@ ATT.ChamberSize = 1
 ATT.ClipSize = 50
 ATT.DropMagazineAmount = 1
 ATT.SuppressEmptySuffix = false 
+ATT.Model = "models/weapons/arc9/darsu_eft/mods/p90mag_tr.mdl"
+ATT.TranslucentPass = true
 
 ATT.Category = {"eft_p90_mag"}
 ATT.ActivateElements = {"p90_50rnd"}
