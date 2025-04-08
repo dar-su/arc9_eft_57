@@ -49,7 +49,7 @@ SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
 -- SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
 SWEP.CustomizePos = Vector(21.7, 25, 3.5)
 SWEP.CustomizeSnapshotFOV = 70
-SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23)
+SWEP.CustomizeRotateAnchor = Vector(21.6, -4.28, -5.23)
 
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
@@ -209,7 +209,7 @@ SWEP.ExitSightsSound = ARC9EFT.ADSPistol
 
 SWEP.DropMagazineModel = "models/weapons/arc9/darsu_eft/mods/57mag.mdl"
 SWEP.DropMagazineAmount = 0
-SWEP.DropMagazineTime = 0.26
+SWEP.DropMagazineTime = 0.5
 SWEP.DropMagazineQCA = 4
 SWEP.DropMagazinePos = Vector(0, -3, 0)
 SWEP.DropMagazineAng = Angle(90, 180, 90)
@@ -339,7 +339,7 @@ local rst_empty = {
     { s =  path .. "fiveseven_slider_in_fast.ogg", t = 68/28 },
     { s = randspin, t = 75/28 },
     {hide = 0, t = 0},
-    {hide = 1, t = 0.4},
+    {hide = 1, t = 0.5},
     {hide = 0, t = 0.9}
     
 }
