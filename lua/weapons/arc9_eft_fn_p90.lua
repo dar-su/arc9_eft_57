@@ -12,11 +12,11 @@ SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
 SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = ARC9:GetPhrase("eft_trivia_manuf_tsniitochmash"),
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "9x39mm",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_gas"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_ru"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1987"
+    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
+    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
+    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_blow"),
+    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
+    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1990"
 }
 
 SWEP.StandardPresets = {
@@ -47,9 +47,16 @@ SWEP.IronSights = {
 SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
 SWEP.SprintAng = Angle(50, 10, -45)
 SWEP.SprintPos = Vector(4, -5, 0)
-SWEP.CustomizePos = Vector(11, 30, 4)
-SWEP.CustomizeSnapshotFOV = 80
-SWEP.CustomizeRotateAnchor = Vector(12, -4.27, -5.23) 
+SWEP.CustomizePos = Vector(11, 40, 4)
+SWEP.CustomizeSnapshotFOV = 50
+SWEP.CustomizeRotateAnchor = Vector(11, -4.27, -5.23) 
+SWEP.CustomizeSnapshotPos = Vector(0, 40, 0)
+
+SWEP.PeekMaxFOV = 60
+-- SWEP.PeekPos = Vector(-1.5, 3, -4.5)
+-- SWEP.PeekAng = Angle(0, 0.4, -35)
+SWEP.PeekPosReloading = Vector(3, 2, -2)
+SWEP.PeekAngReloading = Angle(0, 0, -10)
 
 ------------------------- |||           Stats            ||| -------------------------
 
@@ -323,9 +330,11 @@ SWEP.Animations = {
         Source = "fire_dry",
     },
 
-    ["reload_single"] = {
+    ["reload_empty_single"] = {
         Source = "reload_single",
-        MinProgress = 0.85,
+        RefillProgress = 0.825,
+        PeekProgress = 0.95,
+        MinProgress = 0.99,
         FireASAP = true,
         EventTable = {
             { s = randspin, t = 8/26 },
@@ -341,7 +350,9 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        MinProgress = 0.85,
+        RefillProgress = 0.825,
+        PeekProgress = 0.975,
+        MinProgress = 0.975,
         FireASAP = true,
         MagSwapTime = 42/28,
         EventTable = {
@@ -355,7 +366,9 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = {"reload_empty0", "reload_empty1", "reload_empty2"}, 
-        MinProgress = 0.85,
+        RefillProgress = 0.85,
+        PeekProgress = 0.95,
+        MinProgress = 0.99,
         FireASAP = true,
         MagSwapTime = 35/28,
         EventTable = {
@@ -647,10 +660,10 @@ SWEP.Attachments = {
     {
         PrintName = "Ammunition",
         Category = "eft_ammo_57",
-        Bone = "weapon",
+        Bone = "mod_magazine",
         Integral = true,
         Installed = "eft_ammo_57_ss190",
-        Pos = Vector(0, 4, -6),
+        Pos = Vector(0, 2, 0),
         Ang = Angle(0, 0, 0),
     },
     
@@ -667,7 +680,7 @@ SWEP.Attachments = {
         PrintName = "Custom slot",
         Category = {"eft_custom_slot", "eft_custom_slot_p90"},
         Bone = "weapon",
-        Pos = Vector(0, -2, -2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         -- CosmeticOnly = true,
     },

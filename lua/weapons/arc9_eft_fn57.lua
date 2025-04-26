@@ -47,11 +47,10 @@ SWEP.IronSights = {
 }
 
 SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
--- SWEP.SprintAng = Angle(0, 20.6,  -15.2)
--- SWEP.SprintPos = Vector(0.5, -5.1, -13.5)
-SWEP.CustomizePos = Vector(21.7, 25, 3.5)
-SWEP.CustomizeSnapshotFOV = 70
+SWEP.CustomizePos = Vector(21.7, 32.5, 3.5)
+SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(21.6, -4.28, -5.23)
+SWEP.CustomizeSnapshotPos = Vector(0, 20, 0)
 
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
@@ -69,6 +68,12 @@ SWEP.OneHandedSprint = true
 SWEP.SprintAng = Angle(3, 33, -12)
 SWEP.SprintPos = Vector(3, -7.1, -13)
 SWEP.HoldTypeSprint = "normal"
+
+SWEP.PeekMaxFOV = 60
+SWEP.PeekPos = Vector(-1.5, -1, -4.5)
+SWEP.PeekAng = Angle(0, 0.4, -35)
+SWEP.PeekPosReloading = Vector(3, 3, -3)
+SWEP.PeekAngReloading = Angle(0, 0, -10)
 
 ------------------------- |||           Stats            ||| -------------------------
 
@@ -416,7 +421,9 @@ SWEP.Animations = {
 
     ["reload_single"] = {
         Source = "reload_single",
-        MinProgress = 0.85,
+        RefillProgress = 0.8,
+        PeekProgress = 0.925,
+        MinProgress = 0.975,
         FireASAP = true,
         EventTable = rst_single,
         IKTimeLine = {
@@ -428,7 +435,9 @@ SWEP.Animations = {
     },
     ["reload_empty_single"] = {
         Source = "reload_single",
-        MinProgress = 0.85,
+        RefillProgress = 0.825,
+        PeekProgress = 0.975,
+        MinProgress = 0.975,
         FireASAP = true,
         EventTable = rst_single,
         IKTimeLine = {
@@ -441,7 +450,9 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        MinProgress = 0.85,
+        RefillProgress = 0.825,
+        PeekProgress = 0.95,
+        MinProgress = 0.975,
         FireASAP = true,
         EventTable = rst_def,
         IKTimeLine = {
@@ -453,7 +464,9 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = {"reload_empty0", "reload_empty1", "reload_empty2"}, 
-        MinProgress = 0.85,
+        RefillProgress = 0.85,
+        PeekProgress = 0.975,
+        MinProgress = 0.99,
         FireASAP = true,
         EventTable = rst_empty,
         IKTimeLine = {
@@ -797,10 +810,10 @@ SWEP.Attachments = {
     {
         PrintName = "Ammunition",
         Category = "eft_ammo_57",
-        Bone = "weapon_reciever",
+        Bone = "mod_magazine",
         Integral = true,
         Installed = "eft_ammo_57_ss190",
-        Pos = Vector(0, 1, -4),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -809,7 +822,8 @@ SWEP.Attachments = {
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Installed = "eft_57_mag"
+        Installed = "eft_57_mag",
+		Icon_Offset = Vector(0, 0.3, 1.25),
     },    
     
     {
@@ -822,17 +836,18 @@ SWEP.Attachments = {
     },
 
     {
-        PrintName = "Black",
+        PrintName = "Receiver",
         Category = "eft_57_color",
         Bone = "weapon_reciever",
-        Pos = Vector(0, -4, -4),
+        Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
+		CosmeticOnly = true,
     },
     {
         PrintName = "Custom slot",
         Category = {"eft_custom_slot", "eft_custom_slot_fn57"},
-        Bone = "weapon",
-        Pos = Vector(0, 13, -2),
+        Bone = "weapon_reciever",
+        Pos = Vector(0, -3, -2),
         Ang = Angle(0, 0, 0),
         -- CosmeticOnly = true,
     },

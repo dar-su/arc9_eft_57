@@ -49,7 +49,7 @@ ATT.PhysBulletMuzzleVelocityMult = 1.022
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - EFT Attachments"
-ATT.CustomizePos = Vector(14.5, 22, 4)
+-- ATT.CustomizePos = Vector(14.5, 22, 4)
 ATT.MuzzleEffectQCA = 5
 ATT.BarrelLengthAdd = 5
 
@@ -649,7 +649,7 @@ ATT.EFTErgoAdd = -17
 ATT.CustomCons = { Ergonomics = "-17" }
 
 ATT.Silencer = true 
-ATT.CustomizePos = Vector(14.5, 30, 4)
+-- ATT.CustomizePos = Vector(14.5, 30, 4)
 
 ATT.MuzzleParticle = "muzzleflash_suppressed"
 ATT.MuzzleEffectQCA = 5
