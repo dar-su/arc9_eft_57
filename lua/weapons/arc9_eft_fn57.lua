@@ -70,8 +70,8 @@ SWEP.SprintPos = Vector(3, -7.1, -13)
 SWEP.HoldTypeSprint = "normal"
 
 SWEP.PeekMaxFOV = 60
-SWEP.PeekPos = Vector(-1.5, -1, -4.5)
-SWEP.PeekAng = Angle(0, 0.4, -35)
+-- SWEP.PeekPos = Vector(-1.5, 1, -4.5)
+-- SWEP.PeekAng = Angle(0, 0.4, -35)
 SWEP.PeekPosReloading = Vector(3, 3, -3)
 SWEP.PeekAngReloading = Angle(0, 0, -10)
 
