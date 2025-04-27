@@ -214,7 +214,7 @@ ATT.EFTErgoAdd = -15
 ATT.CustomCons = { Ergonomics = "-15" }
 
 ATT.Silencer = true
-ATT.CustomizeSnapshotFOVAdd = 22
+-- ATT.CustomizeSnapshotFOVAdd = 22
 ATT.BarrelLengthAdd = 5
 
 ATT.MuzzleParticle = "muzzleflash_suppressed"

@@ -50,7 +50,7 @@ SWEP.ActivePos = Vector(-0.5, -2.1, -.45)
 SWEP.CustomizePos = Vector(21.7, 32.5, 3.5)
 SWEP.CustomizeSnapshotFOV = 50
 SWEP.CustomizeRotateAnchor = Vector(21.6, -4.28, -5.23)
-SWEP.CustomizeSnapshotPos = Vector(0, 20, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 10, 0)
 
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_REVOLVER
 
@@ -852,3 +852,18 @@ SWEP.Attachments = {
         -- CosmeticOnly = true,
     },
 }
+
+
+------------------------- |||           CustomizePos            ||| -------------------------
+
+SWEP.CustomizePosHook = function(wep, vec)
+	if wep:HasElement("eft_57_silencer") then
+		return vec + Vector(2.5, 4, 0)
+	end
+end
+
+SWEP.CustomizeRotateAnchorHook = function(wep, vec)
+	if wep:HasElement("eft_57_silencer") then
+		return vec + Vector(2.5, 0, 0)
+	end
+end
