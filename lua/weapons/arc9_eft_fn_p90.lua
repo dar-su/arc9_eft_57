@@ -663,7 +663,7 @@ SWEP.Attachments = {
         Bone = "mod_magazine",
         Integral = true,
         Installed = "eft_ammo_57_ss190",
-        Pos = Vector(0, 2, 0),
+        Pos = Vector(0, -1, 0),
         Ang = Angle(0, 0, 0),
     },
     
