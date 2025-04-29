@@ -184,6 +184,22 @@ SWEP.CustomPoseParamsHandler = function(swep, ent, iswm)
     ent:SetPoseParameter("magspring", 1 - math.Clamp(loadedronds / 50, 0, 1))
 end
 
+SWEP.CustomizePosHook = function(wep, vec)
+	local eles = wep:GetElements()
+	
+	if eles["eft_p90_barrel_407"] or eles["eft_p90_silencer"] then
+		return vec + Vector(3.5, 4, 0)
+	end
+end
+
+SWEP.CustomizeRotateAnchorHook = function(wep, vec)
+	local eles = wep:GetElements()
+	
+	if eles["eft_p90_barrel_407"] or eles["eft_p90_silencer"] then
+		return vec + Vector(3.5, 0, 0)
+	end
+end
+
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/p90/"
@@ -685,22 +701,3 @@ SWEP.Attachments = {
         -- CosmeticOnly = true,
     },
 }
-
-
-------------------------- |||           CustomizePos            ||| -------------------------
-
-SWEP.CustomizePosHook = function(wep, vec)
-	local eles = wep:GetElements()
-	
-	if eles["eft_p90_barrel_407"] or eles["eft_p90_silencer"] then
-		return vec + Vector(3.5, 4, 0)
-	end
-end
-
-SWEP.CustomizeRotateAnchorHook = function(wep, vec)
-	local eles = wep:GetElements()
-	
-	if eles["eft_p90_barrel_407"] or eles["eft_p90_silencer"] then
-		return vec + Vector(3.5, 0, 0)
-	end
-end

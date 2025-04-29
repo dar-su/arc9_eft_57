@@ -194,6 +194,22 @@ SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 SWEP.ShellModel = "models/weapons/arc9/darsu_eft/shells/57x28.mdl"
 SWEP.ShellSounds = ARC9EFT.Shells9mm
 
+SWEP.CustomizePosHook = function(wep, vec)
+	local eles = wep:GetElements()
+
+	if eles["eft_57_silencer"] then
+		return vec + Vector(2.5, 4, 0)
+	end
+end
+
+SWEP.CustomizeRotateAnchorHook = function(wep, vec)
+	local eles = wep:GetElements()
+
+	if eles["eft_57_silencer"] then
+		return vec + Vector(2.5, 0, 0)
+	end
+end
+
 ------------------------- |||           Sounds            ||| -------------------------
 
 local path = "weapons/darsu_eft/57/"
@@ -852,22 +868,3 @@ SWEP.Attachments = {
         -- CosmeticOnly = true,
     },
 }
-
-
-------------------------- |||           CustomizePos            ||| -------------------------
-
-SWEP.CustomizePosHook = function(wep, vec)
-	local eles = wep:GetElements()
-
-	if eles["eft_57_silencer"] then
-		return vec + Vector(2.5, 4, 0)
-	end
-end
-
-SWEP.CustomizeRotateAnchorHook = function(wep, vec)
-	local eles = wep:GetElements()
-
-	if eles["eft_57_silencer"] then
-		return vec + Vector(2.5, 0, 0)
-	end
-end
