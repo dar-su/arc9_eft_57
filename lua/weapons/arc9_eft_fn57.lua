@@ -857,13 +857,17 @@ SWEP.Attachments = {
 ------------------------- |||           CustomizePos            ||| -------------------------
 
 SWEP.CustomizePosHook = function(wep, vec)
-	if wep:HasElement("eft_57_silencer") then
+	local eles = wep:GetElements()
+
+	if eles["eft_57_silencer"] then
 		return vec + Vector(2.5, 4, 0)
 	end
 end
 
 SWEP.CustomizeRotateAnchorHook = function(wep, vec)
-	if wep:HasElement("eft_57_silencer") then
+	local eles = wep:GetElements()
+
+	if eles["eft_57_silencer"] then
 		return vec + Vector(2.5, 0, 0)
 	end
 end
