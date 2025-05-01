@@ -177,7 +177,7 @@ ATT.Category = {"eft_p90_rec"}
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = "eft_cat_scope",
         Category = {"eft_optic_large", "eft_optic_medium", "eft_optic_small"},
         Pos = Vector(0, 0.5, -0.8),
         Ang = Angle(0, -90, 0),
@@ -185,7 +185,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Mount R",
+        PrintName = "eft_cat_mount_r",
         Category = {"eft_p90_effen_side_mount"},
         Pos = Vector(1.35, 2.05, 0.8),
         Ang = Angle(0, -90, 90),
@@ -193,7 +193,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Mount L",
+        PrintName = "eft_cat_mount_l",
         Category = {"eft_p90_effen_side_mount"},
         Pos = Vector(-1.35, 2.05, 0.8),
         Ang = Angle(0, -90, -90),
@@ -225,7 +225,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Attachments = {
     {
-        PrintName = "Tactical",
+        PrintName = "eft_cat_tactical",
         Category = {"eft_tactical_top", "eft_tactical"},
         Pos = Vector(-0.05, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -453,7 +453,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Attachments = {
     {
-        PrintName = "Tactical",
+        PrintName = "eft_cat_tactical",
         Category = {"eft_tactical_top", "eft_tactical"},
         Pos = Vector(-0.05, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -488,13 +488,13 @@ ATT.Category = {"eft_p90_rec"}
 
 ATT.Attachments = {
     {
-        PrintName = "Mount",
+        PrintName = "eft_cat_mount",
         Category = "eft_p90_rec_mount",
         Pos = Vector(0, 1.8, -1.07),
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Mount R",
+        PrintName = "eft_cat_mount_r",
         Category = {"eft_p90_std_side_mount"},
         Pos = Vector(1.07, -1, -1.07),
         Ang = Angle(0, -90, 90),
@@ -502,7 +502,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Mount L",
+        PrintName = "eft_cat_mount_l",
         Category = {"eft_p90_std_side_mount"},
         Pos = Vector(-1.07, -1, -1.07),
         Ang = Angle(0, -90, -90),
@@ -550,7 +550,7 @@ ATT.ModelOffset = Vector(-18.75, 0, -1.38)
 
 ATT.Attachments = {
     {
-        PrintName = "Optic",
+        PrintName = "eft_cat_scope",
         Category = {"eft_optic_medium", "eft_optic_small", "eft_tactical_top", "eft_optic_large"},
         -- Pos = Vector(0, 16.5, -2.61),
         Pos = Vector(0, 16.5-18.75, -1.23),
@@ -559,7 +559,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Rear sight",
+        PrintName = "eft_cat_rearsight",
         Category = "eft_rearsight",
         Pos = Vector(0, 13.7-18.75, -1.23),
         Ang = Angle(0, -90, 0),
@@ -567,7 +567,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Front sight",
+        PrintName = "eft_cat_frontsight",
         Category = "eft_frontsight",
         Pos = Vector(0, 19.3-18.75, -1.23),
         Ang = Angle(0, -90, 0),
@@ -738,13 +738,13 @@ ATT.Category = {"eft_p90_rec"}
 
 ATT.Attachments = {
     {
-        PrintName = "Mount",
+        PrintName = "eft_cat_mount",
         Category = "eft_p90_rec_mount",
         Pos = Vector(0, 1.8, -1.07),
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Mount R",
+        PrintName = "eft_cat_mount_r",
         Category = {"eft_p90_std_side_mount"},
         Pos = Vector(1.07, -1, -1.07),
         Ang = Angle(0, -90, 90),
@@ -752,7 +752,7 @@ ATT.Attachments = {
         -- ExtraSightDistance = 8
     },
     {
-        PrintName = "Mount L",
+        PrintName = "eft_cat_mount_l",
         Category = {"eft_p90_std_side_mount"},
         Pos = Vector(-1.07, -1, -1.07),
         Ang = Angle(0, -90, -90),

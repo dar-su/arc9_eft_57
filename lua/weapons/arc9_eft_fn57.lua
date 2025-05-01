@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "FN Five-seveN MK2"
-SWEP.Description = [[FN Five-Seven, trademarked as the Five-seveN, is a semi-automatic pistol designed and manufactured by FN Herstal in Belgium. The pistol was developed in the early 1990s and features a cold hammer-forged barrel that is chrome-lined for extended service life. The polymer-framed Five-Seven offers single-action operation, low felt recoil, 20-round magazine capacity, and is equipped with an ambidextrous, forward-mounted manual safety, and an accessory rail that accepts tactical lights and lasers.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_fn57")
+SWEP.Description = "eft_weapon_fn57_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_pist")
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_pist")
+SWEP.Class = "eft_class_weapon_pist"
+SWEP.SubCategory = "eft_subcat_pist"
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"]= ARC9:GetPhrase("eft_trivia_act_blow"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "2013"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_fnherstal",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_57x28",
+    ["eft_trivia_act3"] = "eft_trivia_act_blow",
+    ["eft_trivia_country4"] = "eft_trivia_country_belg",
+    ["eft_trivia_year5"] = "2013"
 }
 
 -- SWEP.StandardPresets = {
@@ -782,7 +782,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Muzzle",
+        PrintName = "eft_cat_muzzle",
         Category = "eft_57_muzzle",
         Bone = "mod_barrel",
         Pos = Vector(0, 4.1, 0.7),
@@ -790,7 +790,7 @@ SWEP.Attachments = {
         RequireElements = {"eft_57_barrel_threaded"},
     },
     {
-        PrintName = "Barrel",
+        PrintName = "eft_cat_barrel",
         Category = "eft_57_barrell",
         Bone = "mod_barrel",
         Pos = Vector(0, 1, 0.5),
@@ -798,7 +798,7 @@ SWEP.Attachments = {
         Installed = "eft_57_barrel"
     },
     {
-        PrintName = "Reciever",
+        PrintName = "eft_cat_receiver",
         Category = "eft_57_rec",
         Bone = "weapon_reciever",
         Pos = Vector(0, 0, 0),
@@ -806,7 +806,7 @@ SWEP.Attachments = {
         Installed = "eft_57_rec"
     },
     {
-        PrintName = "Rear Sights",
+        PrintName = "eft_cat_rearsight",
         Category = "eft_57_rs",
         Bone = "weapon_reciever",
         Pos = Vector(0, -1.3, 0.7),
@@ -815,7 +815,7 @@ SWEP.Attachments = {
         Installed = "eft_57_rs"
     },
     {
-        PrintName = "Front Sights",
+        PrintName = "eft_cat_frontsight",
         Category = "eft_57_fs",
         Bone = "weapon_reciever",
         Pos = Vector(0, 5.45, 0.7),
@@ -824,7 +824,7 @@ SWEP.Attachments = {
         Installed = "eft_57_fs"
     },
     {
-        PrintName = "Ammunition",
+        PrintName = "eft_cat_ammo",
         Category = "eft_ammo_57",
         Bone = "mod_magazine",
         Integral = true,
@@ -833,7 +833,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Magazine",
+        PrintName = "eft_cat_magazine",
         Category = "eft_57_mag",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
@@ -843,7 +843,7 @@ SWEP.Attachments = {
     },    
     
     {
-        PrintName = "Tactical",
+        PrintName = "eft_cat_tactical",
         Bone = "weapon",
         Category = {"eft_tactical_pistol", "eft_um3"},
         Pos = Vector(0, 23.8, -0.47),
@@ -852,7 +852,7 @@ SWEP.Attachments = {
     },
 
     {
-        PrintName = "Receiver",
+        PrintName = "eft_cat_receiver",
         Category = "eft_57_color",
         Bone = "weapon_reciever",
         Pos = Vector(0, 0, -1),
@@ -860,7 +860,7 @@ SWEP.Attachments = {
 		CosmeticOnly = true,
     },
     {
-        PrintName = "Custom slot",
+        PrintName = "eft_cat_custom",
         Category = {"eft_custom_slot", "eft_custom_slot_fn57"},
         Bone = "weapon_reciever",
         Pos = Vector(0, -3, -2),

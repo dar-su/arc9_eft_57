@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 
 ------------------------- |||           Trivia            ||| -------------------------
 
-SWEP.PrintName = "FN P90"
-SWEP.Description = [[FN P90, also known as the FN Project 1990, is a compact personal defense weapon (PDW) designed and manufactured by FN Herstal in Belgium. Created in response to NATO requests for a replacement for 9x19mm Parabellum firearms, the P90 was designed as a compact but powerful firearm for vehicle crews, operators of crew-served weapons, support personnel, special forces, and counter-terrorist groups.]]
+SWEP.PrintName = ARC9:GetPhrase("eft_weapon_p90")
+SWEP.Description = "eft_weapon_p90_desc"
 
-SWEP.Class = ARC9:GetPhrase("eft_class_weapon_smg")
-SWEP.SubCategory = ARC9:GetPhrase("eft_subcat_smg")
+SWEP.Class = "eft_class_weapon_smg"
+SWEP.SubCategory = "eft_subcat_smg"
 
 SWEP.Trivia = {
-    [ARC9:GetPhrase("eft_trivia_manuf") .. "1"] = "FN Herstal",
-    [ARC9:GetPhrase("eft_trivia_cal") .. "2"] = "5.7x28mm FN",
-    [ARC9:GetPhrase("eft_trivia_act") .. "3"] = ARC9:GetPhrase("eft_trivia_act_blow"),
-    [ARC9:GetPhrase("eft_trivia_country") .. "4"] = ARC9:GetPhrase("eft_trivia_country_belg"),
-    [ARC9:GetPhrase("eft_trivia_year") .. "5"] = "1990"
+    ["eft_trivia_manuf1"] = "eft_trivia_manuf_fnherstal",
+    ["eft_trivia_cal2"] = "eft_trivia_calibr_57x28",
+    ["eft_trivia_act3"] = "eft_trivia_act_blow",
+    ["eft_trivia_country4"] = "eft_trivia_country_belg",
+    ["eft_trivia_year5"] = "1990"
 }
 
 SWEP.StandardPresets = {
@@ -605,7 +605,7 @@ SWEP.AttachmentElements = {
 
 SWEP.Attachments = {
     {
-        PrintName = "Barrel",
+        PrintName = "eft_cat_barrel",
         Category = "eft_p90_barrel",
         Bone = "weapon",
         Pos = Vector(0, 9, -1),
@@ -613,7 +613,7 @@ SWEP.Attachments = {
         Installed = "eft_p90_barrel_264"
     },
     {
-        PrintName = "Muzzle",
+        PrintName = "eft_cat_muzzle",
         Category = "eft_p90_muzzle",
         Bone = "weapon",
         Pos = Vector(0, 19, -1),
@@ -622,7 +622,7 @@ SWEP.Attachments = {
         Installed = "eft_p90_muzzle_std"
     },
     {
-        PrintName = "Silencer",
+        PrintName = "eft_cat_silencer",
         Category = "eft_p90_silencerr",
         Bone = "weapon",
         Pos = Vector(0, 22, -1),
@@ -630,7 +630,7 @@ SWEP.Attachments = {
         RequireElements = {"eft_p90_muzzle_std"},
     },
     {
-        PrintName = "Stock",
+        PrintName = "eft_cat_stock",
         Category = "eft_p90_stock",
         Bone = "weapon",
         Pos = Vector(0, 7, -2.5),
@@ -638,7 +638,7 @@ SWEP.Attachments = {
         Installed = "eft_p90_stock_std"
     },
     {
-        PrintName = "Buttpad",
+        PrintName = "eft_cat_stock",
         Category = "eft_p90_butt",
         Bone = "weapon",
         Pos = Vector(0, 1, -2),
@@ -646,7 +646,7 @@ SWEP.Attachments = {
         Installed = "eft_p90_butt_std"
     },
     {
-        PrintName = "Up. receiver",
+        PrintName = "eft_cat_receiver",
         Category = "eft_p90_rec",
         Bone = "weapon",
         Pos = Vector(0, 17, 0.3),
@@ -665,7 +665,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Charge",
+        PrintName = "eft_cat_charge",
         Category = "eft_p90_charge",
         Bone = "mod_charging_handle_axis",
         Pos = Vector(0, 0, 0.15),
@@ -674,7 +674,7 @@ SWEP.Attachments = {
     },
 
     {
-        PrintName = "Ammunition",
+        PrintName = "eft_cat_ammo",
         Category = "eft_ammo_57",
         Bone = "mod_magazine",
         Integral = true,
@@ -684,7 +684,7 @@ SWEP.Attachments = {
     },
     
     {
-        PrintName = "Magazine",
+        PrintName = "eft_cat_magazine",
         Category = "eft_p90_mag",
         Bone = "mod_magazine",
         Pos = Vector(0, 0, 0),
@@ -693,7 +693,7 @@ SWEP.Attachments = {
     },
     
     {
-        PrintName = "Custom slot",
+        PrintName = "eft_cat_custom",
         Category = {"eft_custom_slot", "eft_custom_slot_p90"},
         Bone = "weapon",
         Pos = Vector(0, 0, 0),

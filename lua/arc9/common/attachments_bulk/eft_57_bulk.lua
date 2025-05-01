@@ -179,7 +179,7 @@ ATT.Category = {"eft_57_rs"}
 
 ATT.Attachments = {
     {
-        PrintName = "Holosight",
+        PrintName = "eft_cat_scope",
         Category = "eft_rmr",
         Pos = Vector(0, 0.1, -0.0),
         Ang = Angle(0, -90, 0),
