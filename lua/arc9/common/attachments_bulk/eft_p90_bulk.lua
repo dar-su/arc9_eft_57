@@ -536,9 +536,11 @@ ATT.Category = {"eft_p90_rec_mount"}
 
 ATT.Sights = {
     {
-        -- Pos = Vector(-5, 0, -2.5),
-        Pos = Vector(0, -5, -2.3),
-        Ang = Angle(0, -0.09, 0),
+        Pos = Vector(14, 0, -0.9),
+        Ang = Angle(0, -90-0.05, 0),
+
+        -- Pos = Vector(0, -5, -2.3),
+        -- Ang = Angle(0, -0.09, 0),
         Magnification = 1.25,
         ViewModelFOV = 57,
         IsIronSight = true
